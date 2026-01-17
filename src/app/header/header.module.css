@@ -1,0 +1,43 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    margin: 40px 60px 0;
+
+    height: 64px;
+    padding: 0 40px;
+    margin-top: 40px;
+
+    border: 1px solid #E4E4E7;
+    border-radius: 62px;
+    background: rgba(228, 228, 231, 1);
+}
+
+.links {
+    display: flex;
+    font-weight: 400;
+    gap: 32px;
+}
+.links span{
+    font-weight: 700;
+
+}
+
+.logo {
+    justify-self: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.profile {
+    display: flex;
+    justify-self: end;
+    align-items: center;
+    gap: 24px;
+}
+
+
+
+
+
+
