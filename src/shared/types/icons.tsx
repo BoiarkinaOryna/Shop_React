@@ -4,6 +4,7 @@ import Calendar from "../../assets/icons/calendar.png"
 import Cart from "../../assets/icons/cart.png"
 import Copy from "../../assets/icons/copy.png"
 import DownOutline from "../../assets/icons/down-outline.png"
+import Drone from "../../assets/icons/drone.png"
 import Edit from "../../assets/icons/edit.png"
 import EyeOff from "../../assets/icons/eye-off.png"
 import EyeOn from "../../assets/icons/eye-on.png"
@@ -11,6 +12,7 @@ import Facebook from "../../assets/icons/facebook.png"
 import FooterText from "../../assets/icons/footer-text.png"
 import Frame from "../../assets/icons/frame.png"
 import Hamburger from "../../assets/icons/hamburger.png"
+import HeaderLogo from "../../assets/icons/headerLogo.png"
 import Instagram from "../../assets/icons/instagram.png"
 import LightAvatar from "../../assets/icons/light-avatar.png"
 import LightCart from "../../assets/icons/light-cart.png"
@@ -34,6 +36,7 @@ export const icons = {
     Cart,
     Copy,
     DownOutline,
+    Drone,
     Edit,
     EyeOff,
     EyeOn,
@@ -41,6 +44,7 @@ export const icons = {
     FooterText,
     Frame,
     Hamburger,
+    HeaderLogo,
     Instagram,
     LightAvatar,
     LightCart,
