@@ -1,12 +1,14 @@
-import { icons } from "../../shared/types/icons"
-import styles from  "./header.module.css"
-import stylesS from  "./headerSimple.module.css"
+import { icons } from "../../../shared/types/icons"
+import { Product } from "../../../shared/types/types"
+import styles from "./header-product.module.css"
 
+interface HeaderProductProps {
+  product: Product
+}
 
-
-export function Header() {
-  return (
-    <header className={styles.headerContainer}>
+export function HeaderProduct({ product }: HeaderProductProps) {
+  return(
+  <header className={styles.headerContainer}>
         <div className={styles.header}>
             <nav className={styles.links}>
                 <span>КАТАЛОГ</span>
@@ -38,30 +40,4 @@ export function Header() {
         </div>
     </header>
   )
-}
-
-export function HeaderSimple(){
-    return(
-        <header>
-        <div className={stylesS.headerSimple}>
-            <nav className={stylesS.linksSimple}>
-                <span>КАТАЛОГ</span>
-                <span>ПРО НАС</span>
-                <span>КОНТАКТИ</span>
-            </nav>
-
-            <img src={icons.HeaderLogo} className={stylesS.logoSimple} />
-
-            <div className={stylesS.profileSimple}>
-                <div className={stylesS.bagSimple}>
-                    <img src={icons.LightCart} alt="" />
-                </div>
-                <div className={stylesS.userSimple}>
-                    <img src={icons.LightAvatar} alt="" />
-                </div>
-            </div>
-        </div>
-        
-    </header>
-    )
 }
