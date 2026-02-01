@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #CDD5DD;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.toMainPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: #000;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFF;
+    text-decoration: none;
+}

@@ -1,0 +1,66 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 160px;
+    margin-top: 15vh;
+}
+
+.firstBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    width: 70vw;
+}
+
+.textAbout{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    width: 50vw;
+}
+
+.infoBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    max-width: 1360px;
+    gap: 20px;
+}
+
+.textBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 45px;
+    width: 44vw;
+}
+
+.textAbout h1{
+    color: #CDD5DD;
+    font-size: 44px;
+    font-weight: 900;
+}
+
+.textBlock h2{
+    color: #0C122A;
+    font-size: 44px;
+    font-weight: 400;
+}
+
+.textBlock p, .textAbout p{
+    color: #3D4155;
+}
+
+.infoBlock img{
+    width: 45vw;
+}
+
+.firstBlock img{
+    width: 70vw;
+    max-width: 1014px;
+    border-radius: 10px;
+}

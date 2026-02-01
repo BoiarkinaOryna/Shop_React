@@ -1,9 +1,14 @@
-import styles from "./main.module.css";
+import { ReactNode } from "react"
+import styles from './main.module.css'
 
-export function Main() {
-  return (
-    <div className={styles.main}>
-        <h2>Welcome to the Drones Shop!</h2>
-    </div>
-  );
+interface MainProps {
+    children?: ReactNode
+}
+
+export function Main(props: MainProps) {
+    const {children} = props
+    
+    return <main className={styles.main}>
+        {children}
+    </main>
 }
