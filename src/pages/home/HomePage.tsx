@@ -8,6 +8,5 @@ export function HomePage(){
     return <div className={styles.app}>
             <Header />
             <Main />
-            <Footer />
         </div>
 }
