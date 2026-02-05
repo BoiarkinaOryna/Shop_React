@@ -27,6 +27,9 @@ export function useGetProduct(id: string | undefined): UseGetProduct {
           //   },
           // }
         )
+        if (!response.ok) {
+          throw new Error("Товар не найден")
+        }
 
         const data: Product = await response.json()
         console.log("Get-products.tsx data", data)

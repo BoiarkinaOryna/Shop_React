@@ -1,7 +1,15 @@
-import { AppRoutes } from "./AppRoutes";
+// index.tsx или main.tsx
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { AppRoutes } from './AppRoutes';
+import './index.css';
 
-export function App() {
-  return (
-    <AppRoutes/>
-  );
-}
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+
+root.render(
+  <React.StrictMode>
+    <AppRoutes />
+  </React.StrictMode>
+);
