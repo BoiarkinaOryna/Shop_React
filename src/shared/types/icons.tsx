@@ -27,9 +27,13 @@ import Spinner from "../../assets/icons/spinner.png"
 import Telegram from "../../assets/icons/telegram.png"
 import Trash from "../../assets/icons/trash.png"
 import Warning from "../../assets/icons/warning.png"
+import Frame1 from "../../assets/icons/Frame1.png"
+import dronVideo from "../../assets/icons/dronVideo.png"
 
+import whiteArrow from "../../assets/icons/whiteArrow.png"
 
 export const icons = {
+    Frame1,
     ArrowForward,
     Avatar,
     Calendar,
@@ -58,5 +62,9 @@ export const icons = {
     Spinner,
     Telegram,
     Trash,
-    Warning
+    Warning,
+
+    whiteArrow,
+
+    dronVideo
 }

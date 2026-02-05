@@ -10,5 +10,5 @@ const root = createRoot(rootContainer)
 
 // root.render(<Footer></Footer>)
 // root.render(<Header></Header>)
-root.render(<HomePage></HomePage>)
-// root.render(<ProductPage></ProductPage>)
+// root.render(<HomePage></HomePage>)
+root.render(<ProductPage></ProductPage>)

@@ -1,9 +1,16 @@
+import { ReactNode } from "react";
 import styles from "./main.module.css";
 
-export function Main() {
+
+
+interface MainProps {
+    children?: ReactNode
+}
+export function Main(props: MainProps) {
+  const {children} = props
   return (
     <div className={styles.main}>
-        <h2>Welcome to the Drones Shop!</h2>
+      {children}
     </div>
   );
 }

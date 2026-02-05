@@ -7,37 +7,90 @@ interface HeaderProductProps {
 }
 
 export function HeaderProduct({ product }: HeaderProductProps) {
-  return(
-  <header className={styles.headerContainer}>
-        <div className={styles.header}>
-            <nav className={styles.links}>
-                <span>КАТАЛОГ</span>
-                <span>ПРО НАС</span>
-                <span>КОНТАКТИ</span>
-            </nav>
+  let finalPrice = product.price
 
-            <img src={icons.HeaderLogo} className={styles.logo} />
+  if (product.discount) {
+    const percent = parseInt(product.discount)
+    finalPrice = Math.round(product.price * (1 - percent / 100))
+  }
 
-            <div className={styles.profile}>
-                <div className={styles.bag}>
-                    <img src={icons.LightCart} alt="" />
-                </div>
-                <div className={styles.user}>
-                    <img src={icons.LightAvatar} alt="" />
-                </div>
-            </div>
+  return (
+    <header className={styles.headerContainer}>
+      <div className={styles.header}>
+        <nav className={styles.links}>
+          <span>КАТАЛОГ</span>
+          <span>ПРО НАС</span>
+          <span>КОНТАКТИ</span>
+        </nav>
+
+        <img
+          src={icons.HeaderLogo}
+          alt="Логотип магазину"
+          className={styles.logo}
+        />
+
+        <div className={styles.profile}>
+          <img src={icons.LightCart} alt="Кошик" />
+          <img src={icons.LightAvatar} alt="Профіль" />
         </div>
-        <h1 className={styles.heading}>
-            <span>ТЕХНОЛОГІЇ</span>
-            <span>ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ</span>
-        </h1>
-        <img src={icons.Drone} className={styles.drone} alt="" />
-        <div className={styles.whiteArc}>
-            <div className={styles.toCatalog}>
-                <p>Передові технології в одному місці. <br />Обирай найкраще для найважливішого.</p>
-                <button className={styles.catalogButton}>ДО КАТАЛОГУ</button>
-            </div>
+      </div>
+
+      <div className={styles.descriptionContainer}>
+        <h1 className={styles.heading}>{product.title}</h1>
+
+        {product.shortDescription && (
+          <p className={styles.description}>
+            {product.shortDescription}
+          </p>
+        )}
+      </div>
+
+      {product.image?.path && (
+        <img
+          src={product.image.path}
+          alt={product.title}
+          className={styles.drone}
+        />
+      )}
+
+      <div className={styles.productCard}>
+        <img
+          src={product.image?.path}
+          
+          className={styles.cardImage}
+        />
+
+        <div className={styles.cardInfo}>
+          <div className={styles.cardTitle}>{product.title}</div>
+
+          <div className={styles.priceRow}>
+            {product.discount ? (
+              <>
+                <span className={styles.oldPrice}>
+                  {product.price} ₴
+                </span>
+                <span className={styles.newPrice}>
+                  {finalPrice} ₴
+                </span>
+              </>
+            ) : (
+              <span className={styles.singlePrice}>
+                {product.price} ₴
+              </span>
+            )}
+          </div>
         </div>
+        <div className={styles.orderContainer}>
+          <img src={icons.Frame1} alt="Кошик" />
+
+          <button className={styles.orderButton}>
+            ЗАМОВИТИ →
+          </button>
+        </div>
+
+      </div>
+
+      <div className={styles.whiteArc} />
     </header>
   )
 }

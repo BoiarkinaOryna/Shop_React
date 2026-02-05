@@ -19,7 +19,7 @@ export function useGetProduct(id: string | undefined): UseGetProduct {
       try {
         setLoading(true)
         const response = await fetch(
-          `http://localhost:8000/products/${id}`,
+          `http://localhost:3000/products/${id}`,
           {
             method: "GET",
             headers: {
@@ -27,6 +27,9 @@ export function useGetProduct(id: string | undefined): UseGetProduct {
             },
           }
         )
+        if (!response.ok) {
+          throw new Error("Товар не найден")
+        }
 
         const data: Product = await response.json()
         setProduct(data)
