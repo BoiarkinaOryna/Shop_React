@@ -57,6 +57,7 @@ header{
     flex-direction: column;
     gap: 24px;
     width: 986px;
+    margin-top: 20vh;
     text-align: center;
     font-size: 61px;
     font-weight: 900;
@@ -72,7 +73,7 @@ header{
 }
 
 .whiteArc {
-  width: 160%;
+  width: 120%;
   height: 800px;          
   background: #ffffff;
 
@@ -88,7 +89,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 20vh 35vw;
+    margin: 25vh 20vw;
     height: 119px;
 }
 

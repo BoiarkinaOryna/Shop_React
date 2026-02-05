@@ -27,6 +27,7 @@ import Spinner from "../../assets/icons/spinner.png"
 import Telegram from "../../assets/icons/telegram.png"
 import Trash from "../../assets/icons/trash.png"
 import Warning from "../../assets/icons/warning.png"
+import WhiteArrow from "../../assets/icons/white-arrow.png"
 import AboutIllustration1 from "../../assets/images/aboutIllustration1.png"
 import AboutIllustration2 from "../../assets/images/aboutIllustration2.png"
 import AboutIllustration3 from "../../assets/images/aboutIllustration3.png"
@@ -62,6 +63,7 @@ export const icons = {
     Telegram,
     Trash,
     Warning,
+    WhiteArrow,
 
     AboutIllustration1,
     AboutIllustration2,
