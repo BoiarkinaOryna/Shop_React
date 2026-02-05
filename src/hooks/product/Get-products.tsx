@@ -19,7 +19,7 @@ export function useGetProduct(id: string | undefined): UseGetProduct {
       try {
         setLoading(true)
         const response = await fetch(
-          `http://localhost:8000/products/${id}`,
+          `http://localhost:3000/products/${id}`,
           // {
           //   method: "GET",
           //   headers: {

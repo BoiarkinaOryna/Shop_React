@@ -10,10 +10,12 @@ export function ProductPage() {
   const { id } = useParams()
   
   const productId = id || window.location.pathname.match(/\/product\/(\d+)/)?.[1];
-  
+  // const [ params, useIdParams ] = useParams()
+  // const { id } = useParams<{id: string}>()
+  // console.log("product id =", id)
   
   const { product, isLoading, error } = useGetProduct(productId)
-
+  console.log(isLoading, error, product)
   if (isLoading) return <div>Загрузка...</div>
   if (error) return <div>Ошибка: {error}</div>
   if (!product) return <div>Товар не найден. ID: {productId}</div>
