@@ -12,9 +12,9 @@ export function AppRoutes(){
             <Route path="/" element={<Layout />}>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/about" element={<AboutPage/>}/>
+            </Route>
                 <Route path="/success" element={<SuccessPage/>}/>
                 <Route path="/*" element={<NotFoundPage/>}/>
-            </Route>
         </Routes>
     </BrowserRouter>
 }

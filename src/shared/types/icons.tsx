@@ -23,6 +23,7 @@ import Phone from "../../assets/icons/phone.png"
 import PinMap from "../../assets/icons/pin-map.png"
 import Plus from "../../assets/icons/plus.png"
 import Search from "../../assets/icons/search.png"
+import SmallFooterText from "../../assets/icons/small-footer-text.png"
 import Spinner from "../../assets/icons/spinner.png"
 import Telegram from "../../assets/icons/telegram.png"
 import Trash from "../../assets/icons/trash.png"
@@ -59,6 +60,7 @@ export const icons = {
     PinMap,
     Plus,
     Search,
+    SmallFooterText,
     Spinner,
     Telegram,
     Trash,
