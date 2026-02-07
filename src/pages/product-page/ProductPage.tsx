@@ -20,8 +20,7 @@ export function ProductPage() {
   if (error) return <div>Ошибка: {error}</div>
   if (!product) return <div>Товар не найден. ID: {productId}</div>
 
-  return (
-    <>
+  return <div>
       <HeaderProduct product={product} />
       <Main>
         <div className={styles.productPageContainer}>
@@ -182,8 +181,5 @@ export function ProductPage() {
 
       </Main>
 
-
-
-    </>
-  )
+  </div>
 }
