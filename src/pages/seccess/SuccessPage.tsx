@@ -2,12 +2,14 @@ import { Link, useSearchParams } from "react-router-dom"
 import styles from "./success.module.css"
 import { disconnect } from "process";
 import { SmallFooter } from "../../components/SmallFooter/SmallFooter";
+import { HeaderSimple } from "../../app/header/Header";
 
 
 export function SuccessPage() {
     const [searchParams, setSearchParams] = useSearchParams();
     const orderId = searchParams.get("order")
     return <div className={styles.main}>
+        <HeaderSimple/>
         <div className={styles.container}>
             <h1>УСПІХ!</h1>
             <span className={styles.text}>
