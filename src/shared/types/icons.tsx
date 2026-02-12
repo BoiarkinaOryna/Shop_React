@@ -29,8 +29,13 @@ import Trash from "../../assets/icons/trash.png"
 import Warning from "../../assets/icons/warning.png"
 import Frame1 from "../../assets/icons/Frame1.png"
 import dronVideo from "../../assets/icons/dronVideo.png"
+import buttonPag from "../../assets/icons/buttonPag.png"
 
 import whiteArrow from "../../assets/icons/whiteArrow.png"
+import MiniDrone from "../../assets/icons/MiniDrone.png"
+import forwardBut from "../../assets/icons/forwardBut.png"
+import all from "../../assets/icons/all.png"
+
 
 export const icons = {
     Frame1,
@@ -65,6 +70,10 @@ export const icons = {
     Warning,
 
     whiteArrow,
+    buttonPag,
 
-    dronVideo
+    dronVideo,
+    MiniDrone,
+    forwardBut,
+    all,
 }
