@@ -10,7 +10,7 @@ export function CatalogPage(){
         <>
         <HeaderSimple />    
         <Main>
-            <h1>Каталог</h1>
+            <h1 className={styles.heading}>Каталог</h1>
             <div className={styles.mainCon} >
                 <div className={styles.filter} >
                     <div> <img src={icons.all} alt="" /></div>
@@ -147,6 +147,7 @@ export function CatalogPage(){
             </div>
             
         </Main>
+        <Footer/>
         </>
     )
 }

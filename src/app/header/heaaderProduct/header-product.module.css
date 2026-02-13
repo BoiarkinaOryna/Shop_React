@@ -17,7 +17,7 @@ html, body {
 .header {
   display: grid;
   position: fixed;
-   z-index: 1000;
+  z-index: 10;
   /* opacity: 0,5; */
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
@@ -51,7 +51,7 @@ html, body {
 
 .descriptionContainer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20vh;
   z-index: 2;
 }
 
@@ -98,8 +98,8 @@ html, body {
 
 .productCard {
   position: fixed;
-  right: 120px;
-  bottom: 300px;
+  right: 5vw;
+  bottom: 10vh;
 
   width: 232px;
   height: 150px;

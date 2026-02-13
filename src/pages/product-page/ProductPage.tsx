@@ -172,7 +172,7 @@ export function ProductPage() {
             </div>
             <div className={styles.blackBtn}>
                 ДИВИТИСЬ ВСІ
-                <img src={icons.whiteArrow} alt="" />
+                <img src={icons.WhiteArrow} alt="" />
             </div>
             
         </div>

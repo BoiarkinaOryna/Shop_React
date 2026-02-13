@@ -5,6 +5,7 @@ import { AboutPage } from "../pages/about/AboutPage";
 import { NotFoundPage } from "../pages/not-found/NotFoundPage";
 import { SuccessPage } from "../pages/seccess/SuccessPage";
 import { ProductPage } from "../pages/product-page/ProductPage";
+import { CatalogPage } from "../pages/catalog/CatalogPage";
 
 
 export function AppRoutes(){
@@ -14,6 +15,7 @@ export function AppRoutes(){
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/about" element={<AboutPage/>}/>
             </Route>
+            <Route path="/catalog" element={<CatalogPage/>}/>
             <Route path="/products/:id" element={<ProductPage/>}/>
             <Route path="/success" element={<SuccessPage/>}/>
             <Route path="/*" element={<NotFoundPage/>}/>

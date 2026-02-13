@@ -1,15 +1,15 @@
-
 body{
     overflow-x: hidden;
 }
 
-
-
-  h1{
-    font-family: GT Walsheim Pro;
-    font-weight: 900;
-    font-size: 44px;
-    color: rgba(205, 213, 221, 1);
+.heading{
+  margin: 5vh 0;
+  width: 100vw;
+  text-align: center;
+  font-family: GT Walsheim Pro;
+  font-weight: 900;
+  font-size: 44px;
+  color: rgba(205, 213, 221, 1);
 }
 
 .mainCon {
@@ -39,17 +39,6 @@ body{
   border-radius: 80px;
   border: 1px solid rgba(231, 231, 234, 1);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .popularProducts {
   display: grid;
@@ -85,7 +74,7 @@ body{
 .popularProduct span{
   display: flex;
   flex-direction: column;
-  /* gap: -16px; */
+  gap: 16px;
   /* margin-top: - 20px; */
   /* margin-right: 20px; */
   /* padding: 0 0 0 20px; */
