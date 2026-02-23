@@ -1,0 +1,370 @@
+.mainCon{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction:row;
+    padding: 44px;
+    align-items: flex-start;    
+    gap: 400px;
+}
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 44px;
+    /* margin-top: 44px; */
+}
+.title{
+    font-weight: 400;
+    font-size: 30px ;
+    color: #0C122A;
+    /* margin-top: -   20px; */
+}
+.line{
+    border: 1px solid #CDD5DD;
+    width: 668px;
+}
+.mainform{
+    display: flex;
+    gap: 24px;
+    height: 100%;
+    margin-top: -35px;
+}
+.formP{
+    font-weight: 400;
+    font-size: 24px ;
+    color: #0C122A;
+}
+.Formfield{
+    display:flex;
+    flex-direction: column;
+    gap: 8px;   
+}
+.Formfield h1{
+    font-weight: 400;
+    font-size: 14px;
+    color: #0C122A;
+    padding: 10px 0px 0px 0px;
+    /* margin-top: 3px; */
+}
+.Formfield input{
+    width: 668px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #CED0D4;
+    gap: 10px;
+}
+.textarea{
+    height: 99px;
+    width: 668px;
+
+    border-radius: 4px;
+    border: 1px solid #CED0D4;
+}
+.line2{
+    width: 668px;
+    border: 1px solid #CDD5DD;
+    margin-top: 30px;
+
+}
+.deliveryBlock{
+    display: flex;
+    gap:16px;
+    flex-direction: column;
+}
+.radioOption{
+    display: flex;
+    border: 1px solid #CED0D4;
+    height: 44px;
+    gap: 10px;
+    padding: 7px 16px;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+.radioOptionInner{
+    display: flex;
+    gap: 20px;
+    align-items: center;    
+}
+.radioOptionInner h2{
+    font-weight: 500;
+
+    font-size: 15px;
+    color: #0C122A;
+}
+.deliveryCard {
+    display: flex;
+    max-width: 668px;
+    border: 1px solid #CED0D4;
+    padding: 0 16px;
+    min-height: 44px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+}   
+
+.deliveryHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.deliveryHeader h2 {
+    font-weight: 500;
+
+    font-size: 15px;
+    color: #0C122A;
+}
+
+.expandContent {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.open {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 16px;
+}
+
+.activeCard {
+    border: 1px solid #0C122A;
+}
+.Formfielda{
+    display: flex;
+    margin-top:-16px;
+    padding: 0px 0px 14px 0px;
+    /* gap: -8px; */
+    flex-direction: column  ;
+}
+.Formfielda h3{
+    /* padding: 20px 0px 0px 0px; */
+    /* margin-top: -29px    ; */
+    font-weight: 400;
+    font-size: 14px;
+    color: #0C122A;
+
+}
+.citiesList{
+    font-weight: 400;
+    font-size: 11px;
+    color: #0C122A;
+    /* margin-top: -10px; */
+}
+.Formfielda input{
+    width: 668px;
+    height: 40px;
+    border-radius: 4px;
+    padding: 0 16px;
+    /* margin-top: -10px; */
+    border: 1px solid #CED0D4   ;
+}
+.deliveryBlock{
+    display: flex;
+    gap: 16px;
+}
+.paymentBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.onlineMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+
+.onlineOption {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  height: 44px;
+  /* padding: 0 16px; */
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.onlineOption h3 {
+  /* font-family: GT Walsheim Pro;   */
+  font-weight: 200;
+  font-size: 14px;
+  color: #0C122A;
+
+}
+.onlineOption:hover {
+  border: 1px solid #0C122A;
+}
+
+
+
+
+.rightContainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(206, 208, 212, 1);
+    border-radius: 10px;
+    width: 668px;
+    /* height:auto ; */
+}
+
+.orderTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between  ;
+    gap: 16px;
+    padding: 16px 24px;
+}
+
+.orderTitle p{
+    font-weight: 700;
+    font-size: 20px;
+    color: rgba(12, 18, 42, 1);
+}
+
+.orderTitle img{
+    width: 24px;
+    height: 24px;
+}
+.orderContent{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 16px;
+}
+.product{
+    display: flex;
+    gap: 26px;
+    padding: 8px;
+    width: 620px;
+    /* height: 102px   ; */
+    box-sizing: border-box;
+    flex-direction: row;
+}
+.productImage img{
+    width:86px;
+    height: 86px;
+
+}
+.productInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.productName{
+    display: grid;
+
+    flex-direction: column;
+    /* height: 102px; */
+    margin-top: -16px;
+    box-sizing: border-box;
+    /* gap:16px; */
+}
+.productName p {
+    /* font-family: GT Walsheim /Pro; */
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(12, 18, 42, 1);
+}
+.productPrice{
+    display: flex;
+    gap: 16px;
+    width: 240px;
+
+}
+.productPrice p{
+    font-weight: 500;
+    font-size: 14px;
+    color:rgba(12, 18, 42, 1);
+
+}
+.productQuantity{
+    display: flex;
+    justify-content: flex-end;
+}
+.orderProductSum    {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* width: 620px; */
+    /* min-height: 107px; */
+    margin: 0;
+}
+.orderProductSum * {
+    margin: 0;
+}
+.totalAmount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.totalAmount h4{
+    font-weight: 400;
+    font-size: 16px;
+    color: #0C122A;
+
+
+
+}
+.totalAmount1{
+    font-weight: 500;
+    font-size: 16px;
+    color: #0C122A;
+}
+.totalAmount2{
+    font-weight: 500;
+    font-size: 16px;
+    color: #9EA0AA;
+}
+.totalAmount3{
+    font-weight: 500;
+    font-size: 16px;
+    color: #9EA0AA;
+}
+
+.totalAmount4{
+    font-weight: 500;
+    font-size: 20px;
+    color: #B62D11;
+}
+
+
+
+
+.confirmBlock{
+    display: flex;
+    justify-content: flex-end;
+    gap:10px;
+}
+
+.confirmButton{
+    width: 41;
+    width: 264px;
+    border-radius: 100px;
+    padding: 12px 16px;
+    gap: 14px;
+    background-color: #0C122A;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: Stolzl ;
+}
+.line3{
+    width: 620px;
+    border: 1px solid #CED0D4;
+    margin-top: -10px;
+}
+.line4{
+    width: 620px;
+    border: 1px solid #CED0D4;
+    margin-top: 16px;
+}
+.line6{
+    width: 670px;
+    border: 1px solid #CED0D4;
+    margin-top: 30px;
+}

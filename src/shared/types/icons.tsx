@@ -38,6 +38,9 @@ import WhiteArrow from "../../assets/icons/whiteArrow.png"
 import MiniDrone from "../../assets/icons/MiniDrone.png"
 import forwardBut from "../../assets/icons/forwardBut.png"
 import all from "../../assets/icons/all.png"
+import Pen from "../../assets/icons/pen.png"
+import NewMail from "../../assets/icons/newMail.png"
+import Card from "../../assets/icons/card.png"
 
 
 export const icons = {
@@ -83,4 +86,7 @@ export const icons = {
     MiniDrone,
     forwardBut,
     all,
+    Pen,
+    NewMail,
+    Card
 }
