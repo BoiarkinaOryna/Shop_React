@@ -1,8 +1,20 @@
-
 body{
     overflow-x: hidden;
 }
 
+.catalogContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalogContainer h1{
+  margin-top: 15vh;
+  font-weight: 900;
+  font-size: 44px;
+  color: #CDD5DD;
+}
 
 .popularProducts{
   display: flex;

@@ -3,7 +3,7 @@ import styles from "./footer.module.css"
 
 
 export function SmallFooter(){
-    return <footer>
+    return <footer className={styles.footer}>
 
         <div className={styles.drones}>
             <img src={icons.SmallFooterText} alt="Drones" />

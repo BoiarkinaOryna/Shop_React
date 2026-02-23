@@ -3,6 +3,7 @@ import Avatar from "../../assets/icons/avatar.png"
 import Calendar from "../../assets/icons/calendar.png"
 import Cart from "../../assets/icons/cart.png"
 import Copy from "../../assets/icons/copy.png"
+import Cross from "../../assets/icons/cross.png"
 import DownOutline from "../../assets/icons/down-outline.png"
 import Drone from "../../assets/icons/drone.png"
 import Edit from "../../assets/icons/edit.png"
@@ -43,6 +44,7 @@ export const icons = {
     Calendar,
     Cart,
     Copy,
+    Cross,
     DownOutline,
     Drone,
     Edit,

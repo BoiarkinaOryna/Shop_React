@@ -2,12 +2,14 @@ import { Link } from "react-router-dom"
 import { icons } from "../../shared/types/icons"
 import styles from  "./header.module.css"
 import stylesS from  "./headerSimple.module.css"
+import { useState } from "react"
+import { ModalOpener } from "../../components/UserModals/ModalsOpener"
 
 
 
 export function Header() {
-  return (
-    <header className={styles.headerContainer}>
+    const [ isOpen, setIsOpen ] = useState<boolean>(false)
+    return <header className={styles.headerContainer}>
         <div className={styles.header}>
             <nav className={styles.links}>
                 <Link to={"/catalog"}>КАТАЛОГ</Link>
@@ -15,17 +17,17 @@ export function Header() {
                 <Link to={"/contacts"}>КОНТАКТИ</Link>
             </nav>
 
-            <Link to={"/"}>
+            <a href="#top">
                 <img src={icons.HeaderLogo} className={stylesS.logoSimple} />
-            </Link>
+            </a>
 
             <div className={styles.profile}>
                 <div className={styles.bag}>
                     <img src={icons.LightCart} alt="" />
                 </div>
-                <div className={styles.user}>
+                <button onClick={() => setIsOpen(true)} className={styles.user}>
                     <img src={icons.LightAvatar} alt="" />
-                </div>
+                </button>
             </div>
         </div>
         <h1 className={styles.heading}>
@@ -39,18 +41,18 @@ export function Header() {
                 <button className={styles.catalogButton}>ДО КАТАЛОГУ</button>
             </div>
         </div>
+        <ModalOpener isOpen={isOpen} type="registration"/>
     </header>
-  )
 }
 
 export function HeaderSimple(){
-    return(
-        <header>
+    const [ isOpen, setIsOpen ] = useState<boolean>(false)
+    return <header className={stylesS.headerContainer}>
         <div className={stylesS.headerSimple}>
             <nav className={stylesS.linksSimple}>
-                <span>КАТАЛОГ</span>
-                <span>ПРО НАС</span>
-                <span>КОНТАКТИ</span>
+                <Link to={"/catalog"}>КАТАЛОГ</Link>
+                <Link to={"/about"}>ПРО НАС</Link>
+                <Link to={"/contacts"}>КОНТАКТИ</Link>
             </nav>
 
             <Link to={"/"}>
@@ -61,12 +63,12 @@ export function HeaderSimple(){
                 <div className={stylesS.bagSimple}>
                     <img src={icons.LightCart} alt="" />
                 </div>
-                <div className={stylesS.userSimple}>
+                <button onClick={() => setIsOpen(true)} className={stylesS.userSimple}>
                     <img src={icons.LightAvatar} alt="" />
-                </div>
+                </button>
             </div>
         </div>
         
+        <ModalOpener isOpen={isOpen} type="registration"/>
     </header>
-    )
 }

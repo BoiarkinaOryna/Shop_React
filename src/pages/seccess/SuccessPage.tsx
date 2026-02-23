@@ -10,6 +10,7 @@ export function SuccessPage() {
     const orderId = searchParams.get("order")
     return <div className={styles.main}>
         <HeaderSimple/>
+        <div/>
         <div className={styles.container}>
             <h1>УСПІХ!</h1>
             <span className={styles.text}>

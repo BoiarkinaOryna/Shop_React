@@ -8,17 +8,17 @@ export function Footer() {
       <div className={styles.whiteArc}>
         <div className={styles.stats}>
           <div className={styles.stat}>
-            <h2>1K+</h2>
+            <h3>1K+</h3>
             <p>Успішних відправок</p>
           </div>
 
           <div className={styles.stat}>
-            <h2>1.5K+</h2>
+            <h3>1.5K+</h3>
             <p>Задоволених клієнтів</p>
           </div>
 
           <div className={styles.stat}>
-            <h2>24/7</h2>
+            <h3>24/7</h3>
             <p>Підтримка клієнтів</p>
           </div>
         </div>

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 160px;
-    margin-top: 15vh;
+    margin: 15vh 0;
 }
 
 .firstBlock{

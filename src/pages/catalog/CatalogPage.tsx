@@ -5,7 +5,7 @@ import  styles  from "../catalog/catalog.module.css"
 export function CatalogPage(){
 
     return <div  className={styles.catalogContainer}>
-        <h1>Каталог</h1>
+        <h1>КАТАЛОГ</h1>
         <div className={styles.allContent}>
             <div className={styles.filter}>
 

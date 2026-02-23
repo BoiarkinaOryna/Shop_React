@@ -35,8 +35,12 @@ html, body {
 .links {
   display: flex;
   gap: 32px;
+}
+
+.links a{
   font-weight: 700;
   color: #9EA0AA;
+  text-decoration: none;
 }
 
 .logo {
@@ -51,7 +55,7 @@ html, body {
 
 .descriptionContainer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10vh;
   z-index: 2;
 }
 

@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  width: 100vw;
   height: 100vh;
   background: #d7dee4;
   color: #0f172a;
@@ -27,8 +28,7 @@
 
 .stats {
   display: flex;
-  gap: 180px;
-  width: 799px;
+  gap: 10vw;
 }
 
 .stat {
@@ -36,10 +36,9 @@
   flex-direction: column;
   gap: 24px;
   align-items: center;
-  width: 144px;
 }
 
-.stat h2 {
+.stat h3 {
   font-size: 44px;
   font-weight: 700;
   margin: 0;
@@ -52,7 +51,6 @@
 }
 
 .drones {
-  margin-top: 10px  ;    
   opacity: 1;
 }
 
@@ -63,7 +61,7 @@
 }
 
 .links {
-  margin-top: 120px;
+  margin-top: 10vh;
 }
 
 .nav {

@@ -1,7 +1,11 @@
+import { CartContextProvider } from "../context";
 import { AppRoutes } from "./AppRoutes";
 
 export function App() {
   return (
-    <AppRoutes/>
+    <CartContextProvider>
+      <AppRoutes/>
+    </CartContextProvider>
+    
   );
 }

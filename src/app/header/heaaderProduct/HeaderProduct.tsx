@@ -1,26 +1,32 @@
+import { useState } from "react"
 import { icons } from "../../../shared/types/icons"
 import { Product } from "../../../shared/types/types"
 import styles from "./header-product.module.css"
+import { ChangeCartModal } from "../../../components/ChangeCartModal/ChangeCartModal"
+import { useCartContext } from "../../../context"
+import { Link } from "react-router-dom"
 
 interface HeaderProductProps {
   product: Product
 }
 
 export function HeaderProduct({ product }: HeaderProductProps) {
-  let finalPrice = product.price
+  const [isOpen, setIsOpen] = useState(true)
+  const [finalPrice, setFinalPrice] = useState(product.price)
+  const { addCartItem } = useCartContext()
 
   if (product.discount) {
     const percent = parseInt(product.discount)
-    finalPrice = Math.round(product.price * (1 - percent / 100))
+    setFinalPrice(Math.round(product.price * (1 - percent / 100)))
   }
 
   return (
     <header className={styles.headerContainer}>
       <div className={styles.header}>
         <nav className={styles.links}>
-          <span>КАТАЛОГ</span>
-          <span>ПРО НАС</span>
-          <span>КОНТАКТИ</span>
+          <Link to={"/catalog"}>КАТАЛОГ</Link>
+          <Link to={"/about"}>ПРО НАС</Link>
+          <Link to={"/contacts"}>КОНТАКТИ</Link>
         </nav>
 
         <img
@@ -52,8 +58,11 @@ export function HeaderProduct({ product }: HeaderProductProps) {
           className={styles.drone}
         />
       )}
+      
+      {isOpen && <ChangeCartModal isOpen={isOpen} close={() => setIsOpen(false)}/>}
 
       <div className={styles.productCard}>
+        
         <img
           src={product.image?.path}
           
@@ -80,10 +89,14 @@ export function HeaderProduct({ product }: HeaderProductProps) {
             )}
           </div>
         </div>
+        
         <div className={styles.orderContainer}>
-          <img src={icons.Frame1} alt="Кошик" />
+          <button>
+            <img src={icons.Frame1} alt="Кошик" />
+          </button>
 
-          <button className={styles.orderButton}>
+          <button className={styles.orderButton} onClick={() => {addCartItem(product)}}>
+            
             ЗАМОВИТИ →
           </button>
         </div>

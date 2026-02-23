@@ -180,6 +180,6 @@ export function ProductPage() {
         </div>
 
       </Main>
-
+    <Footer/>
   </div>
 }

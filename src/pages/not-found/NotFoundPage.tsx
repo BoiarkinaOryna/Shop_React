@@ -7,6 +7,7 @@ import { HeaderSimple } from "../../app/header/Header";
 export function NotFoundPage(){
     return <div className={styles.main}>
         <HeaderSimple/>
+        <div/>
         <div className={styles.container}>
             <h1>НЕ ЗНАЙДЕНО</h1>
             <span className={styles.text}>

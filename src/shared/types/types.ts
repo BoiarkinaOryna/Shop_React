@@ -8,3 +8,9 @@ export interface Product {
     path: string
   } | null
 }
+
+
+export interface CartItem  {
+  product: Product
+  count: number
+}
