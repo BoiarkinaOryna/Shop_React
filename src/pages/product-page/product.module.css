@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #ffffff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+
+.productPageContainer {
+  display: flex;
+  /* z-index: 100; */
+  flex-direction: column;
+  align-items: center;
+  padding: 230px 0;
+  gap: 160px;
+  min-height: 100vh;
+  width: 90%;
+
+}
+.txtPlusImage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:80%;
+  /* height: 894.375px; */
+  gap: 70px;
+}
+.generalInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 720px;
+  /* height: 254px; */
+  
+  gap: 24px;
+}
+.generalInfo h1{
+  font-weight: 400;
+  font-size: 44px;
+  color: rgba(12, 18, 42, 1);
+}
+
+
+.generalInfo p{
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 16px;
+  color: rgba(61, 65, 85, 1);
+}
+
+
+
+.dronVideo{
+  width: 1014px;
+  height: 570.375px;
+  margin-top: 50px;
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+
+.InfoCamera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 70px;
+}
+
+.generalInfo2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 720px;
+  gap: 24px;
+}
+.generalInfo2 h1{
+  font-weight: 400;
+  font-size: 44px;
+  color: rgba(12, 18, 42, 1);
+}
+
+.generalInfo2 p{
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 16px;
+  color: rgba(61, 65, 85, 1);
+}
+.dronVideo2 {
+  width: 668px;
+  height: 450.8505859375px;
+  border-radius: 20px;
+}
+
+
+
+.flightTime{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 70px;
+
+}
+
+.generalInfo3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 720px;
+  gap: 24px;
+}
+.generalInfo3 h1{
+  font-weight: 400;
+  font-size: 44px;
+  color: rgba(12, 18, 42, 1);
+}
+
+.generalInfo3 p{
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 16px;
+  color: rgba(61, 65, 85, 1);
+}
+.dronVideo3 {
+  width: 668px;
+  height: 450.8505859375px;
+  border-radius: 20px;
+}
+
+
+
+
+
+.memory {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1014px) 1fr;
+  row-gap: 64px;
+}
+
+.memory > * {
+  grid-column: 2;
+}
+
+.memoryHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.memoryHeader h1 {
+  font-size: 44px;
+  font-weight: 400;
+  color: rgba(12, 18, 42, 1);
+}
+
+.memoryHeader p {
+  font-weight: 400;
+  /* line-height: 1.7; */
+  font-size: 16px;
+  color: rgba(61, 65, 85, 1);
+}
+
+.memoryStats {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center;  
+  gap: 16px;
+}
+
+
+.stat h1 {
+  font-size: 44px;
+  font-weight: bold;
+  color: rgba(109, 113, 127, 1);
+}
+
+.stat span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(12, 18, 42, 1);
+}
+
+.memoryImage {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.memoryImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+.blockCatalog{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px
+}
+.blockCatalog h2{
+  font-weight: 900;
+  font-size: 44px;
+  color: rgba(205, 213, 221, 1);
+}
+.popularProducts{
+  display: flex;
+  gap: 24px;
+}
+
+.popularProduct{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 14px;
+  width: 322px;
+}
+
+.popularImage{
+  display: flex;
+  justify-content: center;
+  width: 294px;
+  height: 223px;
+}
+
+.popularImage img{
+  width: 261px;
+}
+
+.popularProduct span{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-weight: 500;
+}
+
+.popularTitle{
+  font-size: 24px;
+}
+
+.popularPrise{
+  font-size: 14px;
+}
+.blackBtn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 237px;
+  height: 60px;
+  gap: 14px;
+  border-radius: 100px;
+  padding: 12px 16px;
+  background-color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #FFF;
+}

@@ -3,18 +3,19 @@ import { Layout } from "./layout/Layout";
 import { HomePage } from "../pages/home/HomePage";
 import { AboutPage } from "../pages/about/AboutPage";
 import { NotFoundPage } from "../pages/not-found/NotFoundPage";
-import { SuccessPage } from "../pages/seccess/SuccessPage";
-
+import { ProductPage } from "../pages/product-page/Product";
 
 export function AppRoutes(){
-    return <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/about" element={<AboutPage/>}/>
-                <Route path="/success" element={<SuccessPage/>}/>
-                <Route path="/*" element={<NotFoundPage/>}/>
-            </Route>
-        </Routes>
-    </BrowserRouter>
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<HomePage/>}/>
+                    <Route path="about" element={<AboutPage/>}/>
+                    <Route path="product/:id" element={<ProductPage />} />
+                    <Route path="*" element={<NotFoundPage/>}/>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }

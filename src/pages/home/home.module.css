@@ -1,167 +1,22 @@
-.container {
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #ffffff;
+}
+
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20vh;
-  margin-top: 20vh;
-  margin-bottom: 10vh;
+  min-height: 100vh;
 }
 
-.blockAbout{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
-}
-
-.container h2{
-  font-size: 44px;
-  font-weight: 900;
-  color: #CDD5DD;
-}
-
-.readMore{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  width: 234px;
-  height: 60px;
-  border: 1.5px solid #0C122A;
-  border-radius: 100px;
-  text-align: center;
-  font-size: 14px;
-  text-decoration: none;
-  color: #0C122A;
-}
-
-.blockNew{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 35vh;
-}
-
-.newProducts{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.newProduct{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 437px;
-  height: 233px;
-  border-radius: 10px;
-  padding: 24px;
-  color: #FFF;
-}
-
-.newDroneImage{
-  position: absolute;
-  top: -350px;
-  display: flex;
-  justify-content: center;
-  width: 389px;
-}
-
-.newDroneImage img{
-  width: 350px;
-}
-
-.newTitle{
-  font-size: 44px;
-  font-weight: 500;
-}
-
-.order{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.buyBtn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 122px;
-  height: 40px;
-  gap: 14px;
-  border-radius: 100px;
-  border: 1px solid #FFF;
-  padding: 12px 16px;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 500;
-  color: #FFF;
-}
-
-.buyBtn img{
-  width: 16px;
-}
-
-.blockCatalog{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px
-}
-
-.popularProducts{
-  display: flex;
-  gap: 24px;
-}
-
-.popularProduct{
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 14px;
-  width: 322px;
-}
-
-.popularImage{
-  display: flex;
-  justify-content: center;
-  width: 294px;
-  height: 223px;
-}
-
-.popularImage img{
-  width: 261px;
-}
-
-.popularProduct span{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  font-weight: 500;
-}
-
-.popularTitle{
-  font-size: 24px;
-}
-
-.popularPrise{
-  font-size: 14px;
-}
-
-.blackBtn{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 237px;
-  height: 60px;
-  gap: 14px;
-  border-radius: 100px;
-  padding: 12px 16px;
-  background-color: #000;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 700;
-  color: #FFF;
-}

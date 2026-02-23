@@ -27,13 +27,21 @@ import Spinner from "../../assets/icons/spinner.png"
 import Telegram from "../../assets/icons/telegram.png"
 import Trash from "../../assets/icons/trash.png"
 import Warning from "../../assets/icons/warning.png"
-import WhiteArrow from "../../assets/icons/white-arrow.png"
-import AboutIllustration1 from "../../assets/images/aboutIllustration1.png"
-import AboutIllustration2 from "../../assets/images/aboutIllustration2.png"
-import AboutIllustration3 from "../../assets/images/aboutIllustration3.png"
+import Frame1 from "../../assets/icons/Frame1.png"
+import dronVideo from "../../assets/icons/dronVideo.png"
+import buttonPag from "../../assets/icons/buttonPag.png"
+
+import whiteArrow from "../../assets/icons/whiteArrow.png"
+import MiniDrone from "../../assets/icons/MiniDrone.png"
+import forwardBut from "../../assets/icons/forwardBut.png"
+import all from "../../assets/icons/all.png"
+import Pen from "../../assets/icons/pen.png"
+import NewMail from "../../assets/icons/newMail.png"
+import Card from "../../assets/icons/card.png"
 
 
 export const icons = {
+    Frame1,
     ArrowForward,
     Avatar,
     Calendar,
@@ -63,9 +71,15 @@ export const icons = {
     Telegram,
     Trash,
     Warning,
-    WhiteArrow,
 
-    AboutIllustration1,
-    AboutIllustration2,
-    AboutIllustration3
+    whiteArrow,
+    buttonPag,
+
+    dronVideo,
+    MiniDrone,
+    forwardBut,
+    all,
+    Pen,
+    NewMail,
+    Card
 }
