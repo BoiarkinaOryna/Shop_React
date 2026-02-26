@@ -7,31 +7,11 @@
   margin-bottom: 10vh; */
 }
 
-.blockAbout{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
+body, html {
+  height: 100%;
 }
 
-.container h2{
-  font-size: 44px;
-  font-weight: 900;
-  color: #CDD5DD;
-}
-
-.readMore{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  width: 234px;
-  height: 60px;
-  border: 1.5px solid #0C122A;
-  border-radius: 100px;
-  text-align: center;
-  font-size: 14px;
-  text-decoration: none;
-  color: #0C122A;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #ffffff;
 }

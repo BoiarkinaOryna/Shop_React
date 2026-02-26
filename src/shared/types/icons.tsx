@@ -34,7 +34,15 @@ import dronVideo from "../../assets/icons/dronVideo.png"
 import AboutIllustration1 from "../../assets/images/aboutIllustration1.png"
 import AboutIllustration2 from "../../assets/images/aboutIllustration2.png"
 import AboutIllustration3 from "../../assets/images/aboutIllustration3.png"
+import buttonPag from "../../assets/icons/buttonPag.png"
+
 import WhiteArrow from "../../assets/icons/whiteArrow.png"
+import MiniDrone from "../../assets/icons/MiniDrone.png"
+import forwardBut from "../../assets/icons/forwardBut.png"
+import all from "../../assets/icons/all.png"
+import Pen from "../../assets/icons/pen.png"
+import NewMail from "../../assets/icons/newMail.png"
+import Card from "../../assets/icons/card.png"
 
 
 export const icons = {
@@ -71,11 +79,18 @@ export const icons = {
     Trash,
 
     WhiteArrow,
+    buttonPag,
 
     dronVideo,
     Warning,
 
     AboutIllustration1,
     AboutIllustration2,
-    AboutIllustration3
+    AboutIllustration3,
+    MiniDrone,
+    forwardBut,
+    all,
+    Pen,
+    NewMail,
+    Card
 }

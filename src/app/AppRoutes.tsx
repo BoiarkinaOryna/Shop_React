@@ -5,6 +5,7 @@ import { AboutPage } from "../pages/about/AboutPage";
 import { NotFoundPage } from "../pages/not-found/NotFoundPage";
 import { SuccessPage } from "../pages/seccess/SuccessPage";
 import { ProductPage } from "../pages/product-page/ProductPage";
+import { PlaceOrder } from "../pages/place-an-order/PlaceOrder";
 import { CatalogPage } from "../pages/catalog/CatalogPage";
 
 
@@ -16,6 +17,7 @@ export function AppRoutes(){
                 <Route path="/about" element={<AboutPage/>}/>
                 <Route path="/catalog" element={<CatalogPage/>}/>
             </Route>
+            <Route path="/order" element={<PlaceOrder/>} />
             <Route path="/products/:id" element={<ProductPage/>}/>
             <Route path="/success" element={<SuccessPage/>}/>
             <Route path="/*" element={<NotFoundPage/>}/>
