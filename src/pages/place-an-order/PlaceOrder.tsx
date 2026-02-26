@@ -16,9 +16,9 @@ export function PlaceOrder() {
         <div className={styles.mainCon}>
           <div className={styles.leftContainer}>
             <p className={styles.title}>ОФОРМИТИ ЗАМОВЛЕННЯ</p>
-            <div className={styles.line}></div>
             <div className={styles.mainform}>
               <form id="orderForm" className={styles.formInfo}>
+                <div className={styles.line}></div>
                 <section>
                   <p className={styles.formP}>Ваші контактні діні </p>
                   <label className={styles.Formfield}>
@@ -51,8 +51,8 @@ export function PlaceOrder() {
                 </section>
                 <div className={styles.line2}></div>
 
-                <section>
                   <p className={styles.formP}>Доставка</p>
+                <section>
                   <div className={styles.deliveryBlock}>
                     <label
                       className={`${styles.deliveryCard} ${
@@ -144,8 +144,8 @@ export function PlaceOrder() {
                   </div>
                 </section>
                 <div className={styles.line6}></div>
-                <section>
                   <p className={styles.formP}>Оплата</p>
+                <section>
 
                   <div className={styles.deliveryBlock}>
                     <label
@@ -231,11 +231,16 @@ export function PlaceOrder() {
                             />
                             <h3>Google Pay</h3>
                           </label>
+
                         </div>
+                        {/* <div className={styles.buttonBack} >
+                        </div> */}
+                          
                       </div>
                     </label>
                   </div>
                 </section>
+                <button className={styles.back}>ПОВЕРНУТИСЬ</button>
               </form>
             </div>
           </div>
@@ -267,7 +272,7 @@ export function PlaceOrder() {
               <div className={styles.orderProductSum}>
                 <div className={styles.totalAmount}>
                   <h4>Загальна сума</h4>
-                  <p className={styles.totalAmount1}>29 990 грн</p>
+                  <p className={styles.totalAmount1}><s>29 990 грн</s></p>
                 </div>
                 <div className={styles.totalAmount}>
                   <h4>Заощаджено</h4>
@@ -285,7 +290,7 @@ export function PlaceOrder() {
               <div className={styles.line4}></div>
               <div className={styles.confirmBlock}>
                 <button form="orderForm" className={styles.confirmButton}>
-                  Підтвердити замовлення
+                  ПІДТВЕРДИТИ ЗАМОВЛЕННЯ
                 </button>
               </div>
             </div>
