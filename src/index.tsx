@@ -3,6 +3,7 @@ import { HomePage } from "./pages/home/HomePage"
 import { ProductPage } from "./pages/product-page/Product"
 import { CatalogPage } from "./pages/catalog/CatalogPage"
 import { PlaceOrder } from "./pages/place-an-order/PlaceOrder"
+import { ContactPage } from "./pages/contact-details/ContactPage"
 
 const rootContainer = document.getElementById("root") as HTMLElement
 
@@ -14,4 +15,5 @@ const root = createRoot(rootContainer)
 // root.render(<Header></Header>)
 // root.render(<HomePage></HomePage>)
 // root.render(<ProductPage></ProductPage>)
-root.render(<PlaceOrder></PlaceOrder>)
+// root.render(<PlaceOrder></PlaceOrder>)
+root.render(<ContactPage></ContactPage>)    
