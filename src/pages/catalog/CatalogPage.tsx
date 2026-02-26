@@ -9,7 +9,7 @@ export function CatalogPage(){
     return(
         <>
         <Main>
-            <h1 className={styles.heading}>Каталог</h1>
+            <h1 className={styles.heading}>КАТАЛОГ</h1>
             <div className={styles.mainCon} >
                 <div className={styles.filter} >
                     <div> <img src={icons.all} alt="" /></div>

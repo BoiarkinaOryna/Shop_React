@@ -1,11 +1,18 @@
 .mainCon{
     display: flex;
-    /* justify-content: space-between; */
-    flex-direction:row;
-    padding: 44px;
-    align-items: flex-start;    
-    gap: 5vw;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90vw;
+    /* padding: 44px; */
+    
+    align-items: flex-start;  
+    margin: 15vh 5vw;
 }
+
+.mainCon h1, .mainCon h2{
+    font-family: "GTWalsheimPro";
+}
+
 .leftContainer{
     display: flex;
     flex-direction: column;
@@ -359,7 +366,6 @@
     color: white;
     font-weight: 400;
     font-size: 14px;
-    font-family: Stolzl ;
 }
 .line3{
     width: 100%;

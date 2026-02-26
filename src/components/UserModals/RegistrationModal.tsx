@@ -7,9 +7,9 @@ export function RegistrationModal(){
     return <div className={styles.modalContainer}>
         <div className={styles.topSector}>
             <p className={styles.modalType}>
-                <span>Авторизація</span>
+                <span>Авторизація </span>
                 /
-                <span>Реєстрація</span>
+                <span> Реєстрація</span>
             </p>
             <img className={styles.closeModal} src={icons.Cross} alt="" />
         </div>
@@ -35,8 +35,8 @@ export function RegistrationModal(){
             </div>
             <div className={styles.bottomSection}>
                 <div className={styles.buttons}>
-                    <button className={styles.cancel}></button>
-                    <button className={styles.confirm}></button>
+                    <button className={styles.cancel}>СКАСУВАТИ</button>
+                    <button className={styles.confirm}>ЗАРЕЄСТРУВАТИСЯ</button>
                 </div>
                 <p>При вході або реєстрації, я підтверджую згоду з умовами <span className={styles.redText}>публічного договору</span></p>
             </div>

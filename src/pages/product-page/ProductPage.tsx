@@ -26,7 +26,7 @@ export function ProductPage() {
         <div className={styles.productPageContainer}>
           <div  className={styles.txtPlusImage}>
             <div className={styles.generalInfo}>
-              <h1>Володійте кожним кутом</h1> 
+              <h3>Володійте кожним кутом</h3> 
               <p>
                 Представляємо вдосконалену систему з трьома камерами, де кожен об'єктив має свої
                 переваги, створюючи виняткові зображення — від широких ширококутних пейзажів до
@@ -50,7 +50,7 @@ export function ProductPage() {
 
           <div  className={styles.InfoCamera}>
             <div className={styles.generalInfo2}>
-              <h1>Основна камера 4/3 CMOS Hasselblad Hasselblad</h1> 
+              <h3>Основна камера 4/3 CMOS Hasselblad Hasselblad</h3> 
               <p>
                 У ретельно розробленій 4/3 CMOS-камері Hasselblad використовується абсолютно 
                 новий 100-мегапіксельний сенсор і відома технологія Hasselblad Natural Color 
@@ -76,7 +76,7 @@ export function ProductPage() {
           <div  className={styles.flightTime}>
             <img className={styles.dronVideo3} src={icons.dronVideo}  />
             <div className={styles.generalInfo3}>
-              <h1>51-хв час польоту</h1> 
+              <h3>51-хв час польоту</h3> 
               <p>
                 Аеродинамічний дизайн Mavic 4 Pro, ефективна силова установка та акумуляторна 
                 батарея ємністю 95 Вт-год забезпечують тривалість польоту до 51 хвилини, 
@@ -98,7 +98,7 @@ export function ProductPage() {
 
           <div className={styles.memory}>
             <div className={styles.memoryHeader}>
-              <h1>ДО 512 ГБ ВБУДОВАНОЇ ПАМʼЯТІ</h1>
+              <h3>ДО 512 ГБ ВБУДОВАНОЇ ПАМʼЯТІ</h3>
               <p>
                 Стандартна версія DJI Mavic 4 Pro поставляється з 64 ГБ вбудованої пам'яті [14], тому ви 
                 можете відразу ж почати зйомку без зовнішньої карти пам'яті. Mavic 4 Pro 512GB в 

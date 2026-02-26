@@ -3,6 +3,7 @@ import { HeaderSimple } from "../../app/header/Header";
 import { Main } from "../../app/main/Main";
 import styles from "./place.module.css";
 import { icons } from "../../shared/types/icons";
+import { SmallFooter } from "../../components/SmallFooter/SmallFooter";
 
 export function PlaceOrder() {
   const [deliveryType, setDeliveryType] = useState<string>("");
@@ -297,6 +298,7 @@ export function PlaceOrder() {
           </div>
         </div>
       </Main>
+      <SmallFooter/>
     </>
   );
 }

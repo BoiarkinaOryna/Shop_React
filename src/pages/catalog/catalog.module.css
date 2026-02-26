@@ -3,10 +3,9 @@ body{
 }
 
 .heading{
-  margin: 5vh 0;
+  margin: 15vh 0 5vh 0;
   width: 100vw;
   text-align: center;
-  font-family: GT Walsheim Pro;
   font-weight: 900;
   font-size: 44px;
   color: rgba(205, 213, 221, 1);
@@ -15,7 +14,6 @@ body{
 .mainCon {
   max-width: 1400px;
   width: 100%;
-  margin: 0 auto;
 }
 
 
