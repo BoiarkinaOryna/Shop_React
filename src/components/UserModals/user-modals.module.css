@@ -1,3 +1,12 @@
+.darkBackground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0C122AB2;
+}
+
 .modalContainer{
     position: fixed;
     display: flex;
@@ -21,6 +30,10 @@
     font-weight: 500;
 }
 
+.restingOption{
+    color: #9EA0AA;
+}
+
 .mainSector{
     display: flex;
     flex-direction: column;
@@ -38,6 +51,7 @@
 .input{
     display: flex;
     flex-direction: column;
+    align-items: start;
     gap: 8px;
 }
 
@@ -60,7 +74,14 @@
     border: none;
     text-align: left;
     font-size: 14px;
+    font-family: "GTWalsheimPro";
     text-decoration: underline;
+    color: #9EA0AA;
+}
+
+.formInputs p{
+    text-align: left;
+    width: 388px;
     color: #9EA0AA;
 }
 
@@ -70,9 +91,13 @@
     gap: 16px;
 }
 
-.buttons{
+.buttons, .buttonsStart{
     display: flex;
     gap: 10px;
+}
+
+.buttonsStart{
+    width: 388px;
 }
 
 .cancel, .confirm{
@@ -91,6 +116,7 @@
 }
 
 .bottomSection p{
+    text-align: start;
     font-size: 14px;
     color: #9EA0AA;
 }

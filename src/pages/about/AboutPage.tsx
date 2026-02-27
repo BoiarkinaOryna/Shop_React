@@ -2,7 +2,7 @@ import { icons } from "../../shared/types/icons"
 import styles from "./about.module.css"
 
 export function AboutPage(){
-    return <div className={styles.container}>
+    return <div className={styles.container} id="top">
         <div className={styles.firstBlock}>
             <div className={styles.textAbout}>
                 <h1>ПРО НАС</h1>

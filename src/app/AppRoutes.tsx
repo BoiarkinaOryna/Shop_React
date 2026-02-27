@@ -7,6 +7,7 @@ import { SuccessPage } from "../pages/seccess/SuccessPage";
 import { ProductPage } from "../pages/product-page/ProductPage";
 import { PlaceOrder } from "../pages/place-an-order/PlaceOrder";
 import { CatalogPage } from "../pages/catalog/CatalogPage";
+import { ContactPage } from "../pages/contact-details/ContactPage";
 
 
 export function AppRoutes(){
@@ -14,6 +15,7 @@ export function AppRoutes(){
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/" element={<Layout />}>
+                <Route path="/contacts" element={<ContactPage/>}/>
                 <Route path="/about" element={<AboutPage/>}/>
                 <Route path="/catalog" element={<CatalogPage/>}/>
             </Route>

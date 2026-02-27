@@ -11,13 +11,13 @@ export function ContactPage() {
           <div className={styles.leftContainer}>
             <p className={styles.leftTitle}>ОСОБИСТИЙ КАБІНЕТ</p>
 
-            <p className={styles.activeItem}>контактні дані</p>
-            <p className={styles.menuItem}>мої замовлення</p>
-            <p className={styles.menuItem}>адрес доставки</p>
+            <p className={styles.activeItem}>КОНТАКТНІ ДАНІ</p>
+            <p className={styles.menuItem}>МОЇ ЗАМОВЛЕННЯ</p>
+            <p className={styles.menuItem}>АДРЕСА ДОСТАВКИ</p>
 
             <div className={styles.line}></div>
 
-            <p className={styles.menuItem}>вийти</p>
+            <p className={styles.menuItem}>ВИЙТИ</p>
           </div>
 
           <div className={styles.rightContainer}>

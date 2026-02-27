@@ -5,6 +5,7 @@ import styles from "./header-product.module.css"
 import { ChangeCartModal } from "../../../components/ChangeCartModal/ChangeCartModal"
 import { useCartContext } from "../../../context"
 import { Link } from "react-router-dom"
+import { HeaderSimple } from "../Header"
 
 interface HeaderProductProps {
   product: Product
@@ -22,24 +23,7 @@ export function HeaderProduct({ product }: HeaderProductProps) {
 
   return (
     <header className={styles.headerContainer}>
-      <div className={styles.header}>
-        <nav className={styles.links}>
-          <Link to={"/catalog"}>КАТАЛОГ</Link>
-          <Link to={"/about"}>ПРО НАС</Link>
-          <Link to={"/contacts"}>КОНТАКТИ</Link>
-        </nav>
-
-        <img
-          src={icons.HeaderLogo}
-          alt="Логотип магазину"
-          className={styles.logo}
-        />
-
-        <div className={styles.profile}>
-          <img src={icons.LightCart} alt="Кошик" />
-          <img src={icons.LightAvatar} alt="Профіль" />
-        </div>
-      </div>
+      <HeaderSimple/>
 
       <div className={styles.descriptionContainer}>
         <h1 className={styles.heading}>{product.title}</h1>

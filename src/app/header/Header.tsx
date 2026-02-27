@@ -8,29 +8,9 @@ import { ModalOpener } from "../../components/UserModals/ModalsOpener"
 
 
 export function Header() {
-    const [ isOpen, setIsOpen ] = useState<boolean>(false)
     return <header className={styles.headerContainer}>
-        <div className={styles.header}>
-            <nav className={styles.links}>
-                <Link to={"/catalog"}>КАТАЛОГ</Link>
-                <Link to={"/about"}>ПРО НАС</Link>
-                <Link to={"/contacts"}>КОНТАКТИ</Link>
-            </nav>
-
-            <a href="#top">
-                <img src={icons.HeaderLogo} className={stylesS.logoSimple} />
-            </a>
-
-            <div className={styles.profile}>
-                <div className={styles.bag}>
-                    <img src={icons.LightCart} alt="" />
-                </div>
-                <button onClick={() => setIsOpen(true)} className={styles.user}>
-                    <img src={icons.LightAvatar} alt="" />
-                </button>
-            </div>
-        </div>
-        <h1 className={styles.heading}>
+        <HeaderSimple isOnHomePage={true}/>
+        <h1 className={styles.heading} id="top">
             <span>ТЕХНОЛОГІЇ</span>
             <span>ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ</span>
         </h1>
@@ -38,26 +18,47 @@ export function Header() {
         <div className={styles.whiteArc}>
             <div className={styles.toCatalog}>
                 <p>Передові технології в одному місці. <br />Обирай найкраще для найважливішого.</p>
-                <button className={styles.catalogButton}>ДО КАТАЛОГУ</button>
+                <Link to={"/catalog"} className={styles.catalogButton}>ДО КАТАЛОГУ</Link>
             </div>
         </div>
-        <ModalOpener isOpen={isOpen} type="registration"/>
     </header>
 }
 
-export function HeaderSimple(){
+
+interface HeaderSimpleInterface {
+    isOnHomePage?: boolean
+    isOnCatalogPage?: boolean
+    isOnAbotPage?: boolean
+}
+
+export function HeaderSimple(props: HeaderSimpleInterface){
+    const { isOnHomePage, isOnCatalogPage, isOnAbotPage } = props
     const [ isOpen, setIsOpen ] = useState<boolean>(false)
-    return <header className={stylesS.headerContainer}>
+    return <div className={stylesS.headerContainer}>
         <div className={stylesS.headerSimple}>
             <nav className={stylesS.linksSimple}>
-                <Link to={"/catalog"}>КАТАЛОГ</Link>
-                <Link to={"/about"}>ПРО НАС</Link>
+                { isOnCatalogPage ?
+                    <a href="#top">КАТАЛОГ</a>
+                    :
+                    <Link to={"/catalog"}>КАТАЛОГ</Link>
+                }
+                { isOnAbotPage ?
+                    <a href="#top">ПРО НАС</a>
+                    :
+                    <Link to={"/about"}>ПРО НАС</Link>
+                }
                 <Link to={"/contacts"}>КОНТАКТИ</Link>
             </nav>
 
-            <Link to={"/"}>
-                <img src={icons.HeaderLogo} className={stylesS.logoSimple} />
-            </Link>
+            { isOnHomePage ?
+                <a href="#top">
+                    <img src={icons.HeaderLogo} className={stylesS.logoSimple} />
+                </a>
+                :
+                <Link to={"/"}>
+                    <img src={icons.HeaderLogo} className={stylesS.logoSimple} />
+                </Link>
+            }
 
             <div className={stylesS.profileSimple}>
                 <div className={stylesS.bagSimple}>
@@ -69,6 +70,8 @@ export function HeaderSimple(){
             </div>
         </div>
         
-        <ModalOpener isOpen={isOpen} type="registration"/>
-    </header>
+        {isOpen && <button className={stylesS.closeModalArea} onClick={() => setIsOpen(false)}>
+            <ModalOpener isOpen={isOpen} type="registration"/>
+        </button>}
+    </div>
 }

@@ -3,8 +3,8 @@
   grid-template-columns: 1fr 2fr;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 90%;
-  padding-top: 80px;
+  width: 90vw;
+  margin-top: 15vh;
   gap: 15%;
 }
 

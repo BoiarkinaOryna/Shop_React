@@ -11,7 +11,7 @@ export function HomePage(){
     
     return <div className={styles.container}>
         <Header/>
-        <div className={styles.blockAbout} id="top">
+        <div className={styles.blockAbout}>
             <h2>ПРО НАС</h2>
             <p>Ми — команда, що об'єднує технології та надійність.<br/>Пропонуємо дрони й тепловізори, перевірені у найскладніших умовах.<br/>Обираємо тільки те, чому довіряємо самі.</p>
             <Link className={styles.readMore} to={"/about"}>

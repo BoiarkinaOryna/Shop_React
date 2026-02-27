@@ -1,15 +1,19 @@
-import { Footer } from "../../app/footer/Footer"
-import { HeaderSimple } from "../../app/header/Header"
 import { Main } from "../../app/main/Main"
+import { useGetAllProducts } from "../../hooks/get-all/Get-all-products"
 import { icons } from "../../shared/types/icons"
 import styles from "./catalog.module.css"
 
 export function CatalogPage(){
 
+    const { isLoading, products, error } = useGetAllProducts(16)
+    console.log("products", products)
+
     return(
-        <>
-        <Main>
-            <h1 className={styles.heading}>КАТАЛОГ</h1>
+        isLoading ? <p>Завантаження</p>
+        : !products ? <p>Продуктів нема</p>
+        :<>
+            <h1 className={styles.heading} id="top">КАТАЛОГ</h1>
+            
             <div className={styles.mainCon} >
                 <div className={styles.filter} >
                     <div> <img src={icons.all} alt="" /></div>
@@ -18,107 +22,18 @@ export function CatalogPage(){
                 </div>
                 <div className={styles.products} >
                     <div className={styles.popularProducts}>
-                
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
+                        {products.map((product) => {
+                            
+                            return <div className={styles.popularProduct}>
+                                <div className={styles.popularImage}>
+                                    <img src={icons.Drone} alt="" />
+                                </div>
+                                <span>
+                                    <p className={styles.popularTitle}>{product.title}</p>
+                                    <p className={styles.popularPrise}>{product.price}  ₴</p>
+                                </span>
                             </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-                        <div className={styles.popularProduct}>
-                            <div className={styles.popularImage}>
-                                <img src={icons.Drone} alt="" />
-                            </div>
-                            <span>
-                                <p className={styles.popularTitle}>DJI Mini 4K</p>
-                                <p className={styles.popularPrise}>29 900 ₴ </p>
-                            </span>
-                        </div>
-
+                        })}
                     </div>
 
                 </div>
@@ -144,8 +59,6 @@ export function CatalogPage(){
 
                 </div>
             </div>
-            
-        </Main>
         </>
     )
 }

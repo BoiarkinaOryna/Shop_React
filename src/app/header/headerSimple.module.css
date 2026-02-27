@@ -46,3 +46,16 @@
     align-items: center;
     gap: 24px;
 }
+
+.userSimple{
+    background-color: transparent;
+    border: none
+}
+
+.closeModalArea{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 10;
+}
