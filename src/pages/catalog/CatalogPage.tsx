@@ -6,7 +6,6 @@ import styles from "./catalog.module.css"
 export function CatalogPage(){
 
     const { isLoading, products, error } = useGetAllProducts(16)
-    console.log("products", products)
 
     return(
         isLoading ? <p>Завантаження</p>
@@ -24,7 +23,7 @@ export function CatalogPage(){
                     <div className={styles.popularProducts}>
                         {products.map((product) => {
                             
-                            return <div className={styles.popularProduct}>
+                            return <div className={styles.popularProduct} key={product.id}>
                                 <div className={styles.popularImage}>
                                     <img src={icons.Drone} alt="" />
                                 </div>

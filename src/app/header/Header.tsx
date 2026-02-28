@@ -70,8 +70,8 @@ export function HeaderSimple(props: HeaderSimpleInterface){
             </div>
         </div>
         
-        {isOpen && <button className={stylesS.closeModalArea} onClick={() => setIsOpen(false)}>
+        {isOpen && <div className={stylesS.closeModalArea} onClick={() => setIsOpen(false)}>
             <ModalOpener isOpen={isOpen} type="registration"/>
-        </button>}
+        </div>}
     </div>
 }
