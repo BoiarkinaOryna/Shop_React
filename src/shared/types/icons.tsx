@@ -43,6 +43,7 @@ import all from "../../assets/icons/all.png"
 import Pen from "../../assets/icons/pen.png"
 import NewMail from "../../assets/icons/newMail.png"
 import Card from "../../assets/icons/card.png"
+import Backet from "../../assets/icons/backet.png"
 
 
 export const icons = {
@@ -92,5 +93,6 @@ export const icons = {
     all,
     Pen,
     NewMail,
-    Card
+    Card,
+    Backet
 }

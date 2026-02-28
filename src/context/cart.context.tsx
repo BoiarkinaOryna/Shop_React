@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useState } from "react";
+import { ReactNode, createContext, useContext, useEffect, useState } from "react";
 import { CartItem, Product } from "../shared/types/types";
 
 interface CartContextContract {
@@ -10,12 +10,25 @@ interface CartContextContract {
     decrementCartItem: (productId: number) => void
     removeCart: () => void
     priceCart: () => number
+    isCaartOpen : boolean
+    openCart: () => void
+    closeCart: () => void
+    discountPriceCart: () => number
+    savedPriceCart: () => number
 }
 
 const CartContext = createContext<CartContextContract | null>(null)
 
 export function CartContextProvider({ children }: { children: ReactNode }) {
-    const [items, setItems] = useState<CartItem[]>([])
+    const [items, setItems] = useState<CartItem[]>(() => {
+        const saved = localStorage.getItem("cart")
+        return saved ? JSON.parse(saved) : []
+    })
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(items))
+    }, [items])
+
 
     function addCartItem(product: Product) {
         if (inCartItem(product.id)) return
@@ -25,9 +38,8 @@ export function CartContextProvider({ children }: { children: ReactNode }) {
 
     }
     function removeCartItem(productId: number) {
-        const newItems = items.filter(items => items.product.id !== productId)
-        return (newItems)
-
+    const newItems = items.filter(item => item.product.id !== productId)
+    setItems(newItems)
     }
     function inCartItem(productId: number) {
         return items.some(item => item.product.id === productId)
@@ -62,6 +74,21 @@ export function CartContextProvider({ children }: { children: ReactNode }) {
         }, 0);
     }
 
+    function discountPriceCart() {
+    return items.reduce((total, item) => {
+        const discount = item.product.discount
+            ? parseInt(item.product.discount)
+            : 0
+
+        const finalPrice = item.product.price * (1 - discount / 100)
+
+        return total + finalPrice * item.count
+    }, 0)
+    }
+    function savedPriceCart() {
+    return priceCart() - discountPriceCart()
+    }
+
     return <CartContext value={{
         items,
         addCartItem,
@@ -71,15 +98,20 @@ export function CartContextProvider({ children }: { children: ReactNode }) {
         decrementCartItem,
         removeCart,
         priceCart,
+        isCaartOpen : false,
+        openCart: () => {},
+        closeCart: () => {},
+        discountPriceCart,
+        savedPriceCart
     }}>
         {children}
     </CartContext>
 }
 
 export function useCartContext() {
-    const context = useContext(CartContext);
+    const context = useContext(CartContext)
     if (!context) {
-        throw new Error("Error context");
+        throw new Error("Error context")
     }
     return context
 }

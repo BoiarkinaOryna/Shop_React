@@ -10,12 +10,17 @@ export interface Product {
 }
 
 
-export interface ShortProduct{
-    id: number;
-    discount: string | null;
-    title: string;
-    price: number;
-    imageId: number | null;
+export interface ShortProduct {
+  id: number
+  title: string
+  price: number
+  imageId?: number
+  image?: {
+    id: number
+    path: string
+    type: string
+    size?: string
+  }
 }
 
 export interface CartItem  {

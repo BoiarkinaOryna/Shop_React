@@ -26,7 +26,7 @@ export function CatalogPage(){
                             
                             return <div className={styles.popularProduct}>
                                 <div className={styles.popularImage}>
-                                    <img src={icons.Drone} alt="" />
+                                    <img src={`http://localhost:8000/uploads/${product.image?.path}`} alt="" />
                                 </div>
                                 <span>
                                     <p className={styles.popularTitle}>{product.title}</p>
