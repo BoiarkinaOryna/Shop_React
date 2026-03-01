@@ -38,6 +38,7 @@ import buttonPag from "../../assets/icons/buttonPag.png"
 
 import WhiteArrow from "../../assets/icons/whiteArrow.png"
 import MiniDrone from "../../assets/icons/MiniDrone.png"
+import MiniVisor from "../../assets/icons/MiniVisor.png"
 import forwardBut from "../../assets/icons/forwardBut.png"
 import all from "../../assets/icons/all.png"
 import Pen from "../../assets/icons/pen.png"
@@ -88,6 +89,7 @@ export const icons = {
     AboutIllustration2,
     AboutIllustration3,
     MiniDrone,
+    MiniVisor,
     forwardBut,
     all,
     Pen,
