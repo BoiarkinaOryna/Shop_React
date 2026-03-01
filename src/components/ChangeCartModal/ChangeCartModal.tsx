@@ -46,7 +46,7 @@ export function ChangeCartModal(props: ModalInterface) {
       onClick={(e) => e.stopPropagation()}
     >
       <div className={styles.head}>
-        <h2>Кошик</h2>
+        <h2>Редагувати товари</h2>
       </div>
 
       <div className={styles.modalBody}>
