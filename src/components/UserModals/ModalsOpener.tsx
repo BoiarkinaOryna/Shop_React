@@ -8,14 +8,13 @@ import { RegistrationSuccessModal } from "./RegistrationSuccessfulModal"
 interface ModalOpenerInterface {
     isOpen: boolean
     type: "registration" | "authorization" | "changePassword" | "newPassword" | "changePasswordSuccess" | "registrationSuccess"
-    onClose: () => void
 }
 
-export function ModalOpener({ isOpen, type, onClose }: ModalOpenerInterface) {
+export function ModalOpener({ isOpen, type }: ModalOpenerInterface) {
     if (!isOpen) return null
 
     switch(type) {
-        case "registration": return <RegistrationModal onClose={onClose} />
+        case "registration": return <RegistrationModal />
         case "authorization": return <AuthorizationModal  />
         case "changePassword": return <EmailModal  />
         case "newPassword": return <NewPasswordModal  />

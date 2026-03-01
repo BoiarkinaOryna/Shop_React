@@ -11,11 +11,7 @@ interface RegisterFormData {
     confirmPassword: string
 }
 
-interface Props {
-    onClose: () => void
-}
-
-export function RegistrationModal({ onClose }: Props) {
+export function RegistrationModal() {
     const { register, handleSubmit, formState, setError } = useForm<RegisterFormData>()
     const [loading, setLoading] = useState(false)
 
@@ -48,7 +44,6 @@ export function RegistrationModal({ onClose }: Props) {
                 setError("root", { type: "server", message: result.message || "Помилка реєстрації" })
             } else {
                 alert("Реєстрація успішна!")
-                onClose()        
                 // navigate("/login") 
             }
         } catch (err: any) {
@@ -66,7 +61,7 @@ export function RegistrationModal({ onClose }: Props) {
                     <p className={styles.modalType} onClick={e => e.stopPropagation()}>
                         <span className={styles.restingOption}>Авторизація </span>/ <span>Реєстрація</span>
                     </p>
-                    <img className={styles.closeModal} src={icons.Cross} alt="Закрити" onClick={onClose} />
+                    <img className={styles.closeModal} src={icons.Cross} alt="Закрити" />
                 </div>
 
                 <form className={styles.mainSector} onSubmit={handleSubmit(onRegisterSubmit)} onClick={e => e.stopPropagation()}>
