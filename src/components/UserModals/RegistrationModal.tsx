@@ -1,35 +1,84 @@
-import { useEffect } from "react"
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router-dom"
 import { icons } from "../../shared/types/icons"
 import styles from "./user-modals.module.css"
-import { useForm } from "react-hook-form"
 
+interface RegisterFormData {
+    name: string
+    email: string
+    password: string
+    confirmPassword: string
+}
 
-export function RegistrationModal(){
+interface Props {
+    onClose: () => void
+    switchToSuccess: () => void
+    switchToAuthorization: () => void 
 
-    const { register, handleSubmit, formState } = useForm()
+}
 
-    function onRegisterSubmit(){
+export function RegistrationModal({ onClose, switchToSuccess, switchToAuthorization }: Props) {
+    const { register, handleSubmit, formState, setError } = useForm<RegisterFormData>()
+    const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
 
+    const { name: nameError, email: emailError, password: passwordError, confirmPassword: confirmPasswordError, root: rootError } = formState.errors
+
+    async function onRegisterSubmit(data: RegisterFormData) {
+        if (data.password !== data.confirmPassword) {
+            setError("confirmPassword", { type: "manual", message: "Паролі не співпадають" })
+            return
+        }
+
+        setLoading(true)
+        try {
+            const response = await fetch("http://localhost:8002/user/registration", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: data.name,
+                    email: data.email,
+                    password: data.password
+                }),
+               
+            });
+
+            const result = await response.json()
+            console.log("result", result)
+            if (!response.ok) {
+                setError("root", { type: "server", message: result.message || "Помилка реєстрації" })
+            } else {
+                alert("Реєстрація успішна!")
+                localStorage.setItem("userRegistered", "true")
+
+                // switchToSuccess() 
+                // onClose()
+                // navigate("/login") 
+            }
+        } catch (err: any) {
+            console.log(err.message)
+            switchToAuthorization() 
+
+            // setError("root", { type: "server", message: err.message || "Помилка мережі" })
+        } finally {
+            setLoading(false)
+        }
     }
 
-    const nameError = formState.errors.name
-    const emailError = formState.errors.email
-    const passwordError = formState.errors.password
-    const confirmPasswordError = formState.errors.confirmPassword
-    const rootError = formState.errors.root
-
-    return <div className={styles.darkBackground}>
-        <div className={styles.modalContainer}>
-            <div className={styles.topSector}>
-                <p className={styles.modalType} onClick={(event) => {event.stopPropagation()}}>
-                    <span className={styles.restingOption}>Авторизація </span>
-                    /
-                    <span> Реєстрація</span>
-                </p>
-                <img className={styles.closeModal} src={icons.Cross} alt="" />
-            </div>
-            <form className={styles.mainSector} onSubmit={handleSubmit(onRegisterSubmit)} onClick={(event) => {event.stopPropagation()}}>
-                <div className={styles.formInputs}>
+    return (
+        <div className={styles.darkBackground}>
+            <div className={styles.modalContainer}>
+                <div className={styles.topSector}>
+                    <p className={styles.modalType} onClick={e => e.stopPropagation()}>
+                        <span className={styles.restingOption}>Авторизація </span>/ <span>Реєстрація</span>
+                    </p>
+                    <img className={styles.closeModal} src={icons.Cross} alt="Закрити" onClick={onClose} />
+                </div>
+                <form className={styles.mainSector} onSubmit={handleSubmit(onRegisterSubmit)} onClick={e => e.stopPropagation()}>
+                    <div className={styles.formInputs}>
                     <div className={styles.input}>
                         <label htmlFor="name">Ім'я</label>
                         <input type="text" placeholder="Введіть ім’я" id="name" {...register("name", {
@@ -81,17 +130,25 @@ export function RegistrationModal(){
                         })}/>
                         <p>{ confirmPasswordError?.message as string | undefined }</p>
                     </div>
-                    <button>Вже є акаунт? Увійти</button>
+                        <button
+                            type="button"
+                            onClick={() => switchToAuthorization()}>
+                            Вже є акаунт? Увійти
+                        </button>
                 </div>
                 <div className={styles.bottomSection}>
                     <div className={styles.buttons}>
                         <button type="button" className={styles.cancel}>СКАСУВАТИ</button>
-                        <button className={styles.confirm}>ЗАРЕЄСТРУВАТИСЯ</button>
+                        <button className={styles.confirm}>
+
+                                {loading ? "Реєстрація..." : "ЗАРЕЄСТРУВАТИСЯ"}
+                        </button>
                     </div>
                     {rootError && <p className={styles.error}>{rootError.message}</p>}
                     <p>При вході або реєстрації, я підтверджую згоду з умовами <span className={styles.redText}>публічного договору</span></p>
                 </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-}
+    )
+}                

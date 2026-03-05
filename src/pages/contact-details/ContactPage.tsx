@@ -1,8 +1,16 @@
 import { HeaderSimple } from "../../app/header/Header";
 import { Main } from "../../app/main/Main";
 import styles from "./contact.module.css";
+import { useNavigate } from "react-router-dom";
+
 
 export function ContactPage() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("userRegistered"); 
+    navigate("/"); 
+  };
   return (
     <>
       <HeaderSimple />
@@ -17,7 +25,7 @@ export function ContactPage() {
 
             <div className={styles.line}></div>
 
-            <p className={styles.menuItem}>ВИЙТИ</p>
+            <p className={styles.menuItem} onClick={handleLogout}>ВИЙТИ</p>
           </div>
 
           <div className={styles.rightContainer}>
