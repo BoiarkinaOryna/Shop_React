@@ -1,0 +1,94 @@
+.container{
+    height: 100vh;
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1{
+    font-size: 44px;
+    color: #CDD5DD;
+    margin-bottom: 5vh;
+}
+
+.infoContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    gap: 24px;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.contatcInfoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.subHeaders{
+    font-size: 24px;
+}
+
+.contactOption{
+    display: flex;
+    gap: 10px;
+}
+
+.contatcInfo{
+    font-size: 20px;
+    color: #6D717F;
+}
+
+.mediaHeader{
+    font-size: 20px;
+}
+
+.mediaLogos{
+    display: flex;
+    justify-content: space-between;
+    width: 168px;
+}
+
+.block form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.block label{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.block input, .block textarea{
+    width: 45vw;
+    height: 40px;
+    padding: 16px;
+    border: 1px solid #CED0D4;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #9EA0AA;
+}
+
+.block textarea{
+    min-height: 100px;
+}
+
+.block form button{
+    display: flex;
+    width: 170px;
+    margin-top: 30px;
+    padding: 18px 40px;
+    border-radius: 100px;
+    border: none;
+    background-color: #000;
+    font-size: 14px;
+    color: #fff;
+}

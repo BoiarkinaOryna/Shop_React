@@ -8,6 +8,7 @@ import { ProductPage } from "../pages/product-page/ProductPage";
 import { PlaceOrder } from "../pages/place-an-order/PlaceOrder";
 import { CatalogPage } from "../pages/catalog/CatalogPage";
 import { ContactPage } from "../pages/contact-details/ContactPage";
+import { Feedback } from "../pages/send-feedback/Feedback";
 
 
 export function AppRoutes(){
@@ -18,6 +19,7 @@ export function AppRoutes(){
                 <Route path="/contacts" element={<ContactPage/>}/>
                 <Route path="/about" element={<AboutPage/>}/>
                 <Route path="/catalog" element={<CatalogPage/>}/>
+                <Route path="/send-feedback" element={<Feedback />}></Route>
             </Route>
             <Route path="/order" element={<PlaceOrder/>} />
             <Route path="/products/:id" element={<ProductPage/>}/>

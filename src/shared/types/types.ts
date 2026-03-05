@@ -27,3 +27,10 @@ export interface CartItem  {
     product: Product
     count: number
 }
+
+export interface UseFeedBack{
+    name: string
+    email: string
+    phoneNumber: string
+    message: string,
+}
