@@ -7,7 +7,6 @@ html, body {
 .headerContainer {
   position: relative;
   height: 100vh;
-  overflow: hidden;
   background-color: #CDD5DD;
   display: flex;
   flex-direction: column;

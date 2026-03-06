@@ -3,6 +3,7 @@ import { useCartContext } from "../../context";
 import { ModalInterface } from "./modalInterface";
 import styles from "./modal.module.css";
 import { icons } from "../../shared/types/icons";
+import { Link } from "react-router-dom";
 
 export function ChangeCartModal(props: ModalInterface) {
   const {
@@ -134,9 +135,9 @@ export function ChangeCartModal(props: ModalInterface) {
                 <button>ПЕРЕЙТИ ДО КОШИКА </button>
               </div>
               <div className={styles.toIssue}>
-                <button>
+                <Link to={"/order"}>
                   ОФОРМИТИ ЗАМОВЛЕННЯ <img src={icons.WhiteArrow} alt="" />
-                </button>
+                </Link>
               </div>
             </div>
           </>

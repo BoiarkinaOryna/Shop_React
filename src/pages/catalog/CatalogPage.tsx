@@ -4,11 +4,15 @@ import { useGetAllProducts } from "../../hooks/get-all/Get-all-products"
 import { icons } from "../../shared/types/icons"
 import styles from "./catalog.module.css"
 import { ShortProduct } from "../../shared/types/types"
+import { Link } from "react-router-dom"
+import { useCartContext } from "../../context"
+import { API_URL } from "../../shared/api"
 
 export function CatalogPage(){
     const [ mode, setMode ] = useState<"all" | "drone" | "visor">("all")
     const [ page, setPage ] = useState<number>(1)
     const { isLoading, products, error } = useGetAllProducts(mode, page)
+    const { addCartItem } = useCartContext()
 
     function decreasePageNumber(){
         if (page - 1 <= 0) return
@@ -37,13 +41,18 @@ export function CatalogPage(){
                     <div className={styles.popularProducts}>
                         {products.map((product) => {
                             return <div className={styles.popularProduct} key={product.id}>
-                                <div className={styles.popularImage}>
-                                    <img src={`http://localhost:8000/uploads/${product.image?.path}`} alt="" />
+                                <Link to={`/products/${product.id}`}  className={styles.popularImage}>
+                                    <img src={`${API_URL}/uploads/${product.image?.path}`} alt="" />
+                                </Link>
+                                <div className={styles.productDescription} onClick={e => e.stopPropagation()}>
+                                    <Link to={`/products/${product.id}`} >
+                                        <p className={styles.popularTitle}>{product.title}</p>
+                                        <p className={styles.popularPrise}>{product.price}  ₴</p>
+                                    </Link>
+                                    <button className={styles.cartOpener}>
+                                        <img src={icons.Frame1} alt="Кошик" onClick={() => addCartItem(product)} />
+                                    </button>
                                 </div>
-                                <span>
-                                    <p className={styles.popularTitle}>{product.title}</p>
-                                    <p className={styles.popularPrise}>{product.price}  ₴</p>
-                                </span>
                             </div>
                         })}
                     </div>

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
 import { icons } from "../../shared/types/icons"
 import styles from "./user-modals.module.css"
+import { API_URL } from "../../shared/api"
 
 interface RegisterFormData {
     name: string
@@ -11,9 +12,17 @@ interface RegisterFormData {
     confirmPassword: string
 }
 
-export function RegistrationModal() {
+interface Props {
+    onClose: () => void
+    switchToSuccess: () => void
+    switchToAuthorization: () => void 
+
+}
+
+export function RegistrationModal({ onClose, switchToSuccess, switchToAuthorization }: Props) {
     const { register, handleSubmit, formState, setError } = useForm<RegisterFormData>()
     const [loading, setLoading] = useState(false)
+    const navigate = useNavigate()
 
     const { name: nameError, email: emailError, password: passwordError, confirmPassword: confirmPasswordError, root: rootError } = formState.errors
 
@@ -25,7 +34,7 @@ export function RegistrationModal() {
 
         setLoading(true)
         try {
-            const response = await fetch("http://localhost:8000/user/registration", {
+            const response = await fetch(`${API_URL}/user/registration`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -44,10 +53,16 @@ export function RegistrationModal() {
                 setError("root", { type: "server", message: result.message || "Помилка реєстрації" })
             } else {
                 alert("Реєстрація успішна!")
+                localStorage.setItem("userRegistered", "true")
+
+                // switchToSuccess() 
+                // onClose()
                 // navigate("/login") 
             }
         } catch (err: any) {
             console.log(err.message)
+            switchToAuthorization() 
+
             // setError("root", { type: "server", message: err.message || "Помилка мережі" })
         } finally {
             setLoading(false)
@@ -61,9 +76,8 @@ export function RegistrationModal() {
                     <p className={styles.modalType} onClick={e => e.stopPropagation()}>
                         <span className={styles.restingOption}>Авторизація </span>/ <span>Реєстрація</span>
                     </p>
-                    <img className={styles.closeModal} src={icons.Cross} alt="Закрити" />
+                    <img className={styles.closeModal} src={icons.Cross} alt="Закрити" onClick={onClose} />
                 </div>
-
                 <form className={styles.mainSector} onSubmit={handleSubmit(onRegisterSubmit)} onClick={e => e.stopPropagation()}>
                     <div className={styles.formInputs}>
                     <div className={styles.input}>
@@ -117,7 +131,11 @@ export function RegistrationModal() {
                         })}/>
                         <p>{ confirmPasswordError?.message as string | undefined }</p>
                     </div>
-                    <button>Вже є акаунт? Увійти</button>
+                        <button
+                            type="button"
+                            onClick={() => switchToAuthorization()}>
+                            Вже є акаунт? Увійти
+                        </button>
                 </div>
                 <div className={styles.bottomSection}>
                     <div className={styles.buttons}>
@@ -134,4 +152,4 @@ export function RegistrationModal() {
             </div>
         </div>
     )
-}
+}                

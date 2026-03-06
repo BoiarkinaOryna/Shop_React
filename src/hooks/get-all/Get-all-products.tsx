@@ -20,7 +20,7 @@ export function useGetAllProducts(mode: string, page: number): UseGetAllContract
                 setLoading(true)
 
                 if (mode === "all"){
-                    let response = await fetch(`${API_URL}/products?take=16&page=${page}`)
+                    let response = await fetch(`${API_URL}/products?take=15&page=${page}`)
                     console.log("response", response)
                     const data: ShortProduct[] = await response.json()
                     console.log("Get-products data", data)
