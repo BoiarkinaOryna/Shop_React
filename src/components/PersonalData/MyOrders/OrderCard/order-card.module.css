@@ -1,0 +1,127 @@
+.text{
+    font-size: 14px;
+}
+
+.greyText{
+    font-size: 14px;
+    color: #9EA0AA;
+}
+
+.orderCard{
+    width: 59vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    border: 1px solid #E7E7EA;
+}
+
+.topSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.generalInfo, .cardOpener{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.elipse{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #CED0D4;
+}
+
+.orderDetail, .addressBlock{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.droneImage{
+    width: 50px;
+    height: 50px;
+}
+
+.middleSection{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bottomSection, .bottomSectionContainerLeft, .bottomSectionContainerRight{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.copyNumber{
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+.copyNumber img{
+    width: 100%;
+}
+
+.middleSection .text{
+    display: flex;
+    gap: 9px;
+}
+
+.middleSection div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomSectionContainerLeft{
+    width: 20vw;
+}
+
+.bottomSectionContainerRight{
+    width: 35vw;
+}
+
+.devidedBlock{
+    display: flex;
+    justify-content: space-between;
+}
+
+.to5Sections{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.to5Sections p{
+    text-align: center;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.listRow{
+    display: flex;
+}
+
+.listRow .greyText{
+    width: 8vw;
+}
+
+.bottomSectionContainerRight button{
+    width: 8vw;
+    min-width: 100px;
+    height: 4vh;
+    background-color: transparent;
+    border: 1.5px solid #0C122A;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+}

@@ -25,6 +25,7 @@ import Mail from "../../assets/icons/mail.png"
 import MailGrey from "../../assets/icons/mail-grey.png"
 import Map from "../../assets/icons/map.png"
 import Minus from "../../assets/icons/minus.png"
+import OrderNav from "../../assets/images/orderNav.png"
 import Phone from "../../assets/icons/phone.png"
 import PhoneGrey from "../../assets/icons/phone-grey.png"
 import PinMap from "../../assets/icons/pin-map.png"
@@ -83,6 +84,7 @@ export const icons = {
     MailGrey,
     Map,
     Minus,
+    OrderNav,
     Phone,
     PhoneGrey,
     PinMap,
