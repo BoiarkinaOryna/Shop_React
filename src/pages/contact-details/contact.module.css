@@ -24,6 +24,8 @@
 .menuItem,
 .activeItem {
   font-size: 14px;
+  text-decoration: none;
+  font-family: "GTWalsheimPro";
 }
 
 .activeItem {

@@ -4,11 +4,26 @@ import { Main } from "../../app/main/Main";
 import styles from "./place.module.css";
 import { icons } from "../../shared/types/icons";
 import { SmallFooter } from "../../components/SmallFooter/SmallFooter";
+import { useGetCityRef } from "../../hooks/get-post/Get-cityRef";
+import { useGetPostNumber } from "../../hooks/get-post/Get-postNumber";
+
 
 export function PlaceOrder() {
-  const [deliveryType, setDeliveryType] = useState<string>("");
+  const [cityName, setCityName] = useState<string>()
+  const [deliveryType, setDeliveryType] = useState<string>();
   const [paymentType, setPaymentType] = useState<string>("");
   const [onlineMethod, setOnlineMethod] = useState<string>("card");
+  // const [cityRef, setCityRef] = useState<string>()
+  // const [warehouses, setWarehouses] = useState<[]>()
+
+  const cityRef = useGetCityRef(cityName)
+  // setCityRef(useGetCityRef(cityName))
+  // cr && setCityRef(cr) // тут помилка перерендерів
+  // const warehouses = useGetPostNumber({deliveryType, cityRef})
+  // setCityRef(useGetCityRef(cityName))
+  // console.log("cityRef", cr)
+  // setWarehouses(useGetPostNumber({deliveryType, cityRef}))
+  // console.log(warehouses)
 
   return (
     <>
@@ -52,21 +67,21 @@ export function PlaceOrder() {
                 </section>
                 <div className={styles.line2}></div>
 
-                  <p className={styles.formP}>Доставка</p>
+                <p className={styles.formP}>Доставка</p>
                 <section>
                   <div className={styles.deliveryBlock}>
                     <label
                       className={`${styles.deliveryCard} ${
-                        deliveryType === "postomat" ? styles.activeCard : ""
+                        deliveryType === "Postomat" ? styles.activeCard : ""
                       }`}
                     >
                       <div className={styles.deliveryHeader}>
                         <input
                           type="radio"
                           name="delivery"
-                          value="postomat"
-                          checked={deliveryType === "postomat"}
-                          onChange={() => setDeliveryType("postomat")}
+                          value="Postomat"
+                          checked={deliveryType === "Postomat"}
+                          onChange={() => setDeliveryType("Postomat")}
                         />
                         <h2>Нова Пошта до поштомату</h2>
                         <img src={icons.NewMail} />
@@ -74,12 +89,12 @@ export function PlaceOrder() {
 
                       <div
                         className={`${styles.expandContent} ${
-                          deliveryType === "postomat" ? styles.open : ""
+                          deliveryType === "Postomat" ? styles.open : ""
                         }`}
                       >
                         <label className={styles.Formfielda}>
                           <h3>Місто</h3>
-                          <input type="text" placeholder="Дніпро" />
+                          <input type="text" placeholder="Дніпро" onChange={(e) => setCityName(e.target.value)} />
                           <p className={styles.citiesList}>
                             Вінниця Одеса Харків Дніпро Київ Львів
                           </p>
