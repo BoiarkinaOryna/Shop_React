@@ -6,12 +6,12 @@ export function EmailModal(){
     return <div className={styles.darkBackground}>
         <div className={styles.modalContainer}>
             <div className={styles.topSector}>
-                <p className={styles.modalType}>
+                <p className={styles.modalType} onClick={(event) => {event.stopPropagation()}}>
                     <span>Відновлення пароля</span>
                 </p>
                 <img className={styles.closeModal} src={icons.Cross} alt="" />
             </div>
-            <div className={styles.mainSector}>
+            <div className={styles.mainSector} onClick={(event) => {event.stopPropagation()}}>
                 <div className={styles.formInputs}>
                     <div className={styles.input}>
                         <label htmlFor="email">Email</label>

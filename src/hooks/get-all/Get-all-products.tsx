@@ -3,13 +3,13 @@ import { ShortProduct } from "../../shared/types/types";
 import { API_URL } from "../../shared/api"
 
 
-interface UseGetAlContract {
+interface UseGetAllContract {
     isLoading: boolean
     products: ShortProduct[] | null
     error: string | null
 }
 
-export function useGetAllProducts(take: number): UseGetAlContract{
+export function useGetAllProducts(mode: string, page: number): UseGetAllContract{
     const [products, setProducts] = useState<ShortProduct[] | null>(null)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
@@ -19,11 +19,23 @@ export function useGetAllProducts(take: number): UseGetAlContract{
             try {
                 setLoading(true)
 
-                let response = await fetch(`${API_URL}/products?take=${take}`)
-                console.log("response", response)
-                const data: ShortProduct[] = await response.json()
-                console.log("Get-products.tsx data", data)
-                setProducts(data)
+                if (mode === "all"){
+                    let response = await fetch(`${API_URL}/products?take=15&page=${page}`)
+                    console.log("response", response)
+                    const data: ShortProduct[] = await response.json()
+                    console.log("Get-products data", data)
+                    setProducts(data)
+                } else {
+                    let response = await fetch(`${API_URL}/products/catalog?category=${mode}`)
+                    console.log("response", response)
+                    if (!response.ok){
+                        console.log(await response.json())
+                        setError(await response.json())
+                    }
+                    const data: ShortProduct[] = await response.json()
+                    console.log("Get-fitered data", data)
+                    setProducts(data)
+                }
             }catch (error){
                 console.log("Get-products.tsx error", error)
                 if (error instanceof Error) {
@@ -34,7 +46,7 @@ export function useGetAllProducts(take: number): UseGetAlContract{
             }
         }
     getPopular()
-    }, [take])
+    }, [mode, page])
 
     return { isLoading: loading, products, error }
 }

@@ -6,12 +6,12 @@ export function NewPasswordSuccessModal(){
     return <div className={styles.darkBackground}>
         <div className={styles.modalContainer}>
             <div className={styles.topSector}>
-                <p className={styles.modalType}>
+                <p className={styles.modalType} onClick={(event) => {event.stopPropagation()}}>
                     <span>Новий пароль</span>
                 </p>
                 <img className={styles.closeModal} src={icons.Cross} alt="" />
             </div>
-            <div className={styles.mainSector}>
+            <div className={styles.mainSector} onClick={(event) => {event.stopPropagation()}}>
                 <div className={styles.formInputs}>
                     <p>Пароль успішно змінено!</p>
                     <p>Тепер ви можете увійти з новим паролем.</p>

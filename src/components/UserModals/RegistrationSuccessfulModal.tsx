@@ -6,12 +6,12 @@ export function RegistrationSuccessModal(){
     return <div className={styles.darkBackground}>
         <div className={styles.modalContainer}>
             <div className={styles.topSector}>
-                <p className={styles.modalType}>
+                <p className={styles.modalType} onClick={(event) => {event.stopPropagation()}}>
                     <span>Реестрація</span>
                 </p>
                 <img className={styles.closeModal} src={icons.Cross} alt="" />
             </div>
-            <div className={styles.mainSector}>
+            <div className={styles.mainSector} onClick={(event) => {event.stopPropagation()}}>
                 <div className={styles.formInputs}>
                     <p>Акаунт успішно створено!</p>
                 </div>

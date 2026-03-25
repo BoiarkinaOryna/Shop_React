@@ -70,7 +70,7 @@ export function HeaderProduct({ product }: HeaderProductProps) {
         </div>
 
         <div className={styles.orderContainer}>
-          <button onClick={() => setIsOpen(true)}>
+          <button onClick={() => setIsOpen(true)} className={styles.cartOpener}>
             <img src={icons.Frame1} alt="Кошик" />
           </button>
 

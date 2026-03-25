@@ -24,16 +24,13 @@ body, html {
   align-items: center;
   justify-content: center;
   width:80%;
-  /* height: 894.375px; */
   gap: 70px;
 }
 .generalInfo{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 720px;
-  /* height: 254px; */
-  
+  width: 720px;  
   gap: 24px;
 }
 .generalInfo h3{
@@ -51,8 +48,7 @@ body, html {
 }
 
 .dronVideo{
-  width: 1014px;
-  height: 570.375px;
+  width: 70vw;
   margin-top: 50px;
   border: 2px solid rgba(255, 255, 255, 1);
 }
@@ -85,8 +81,7 @@ body, html {
   color: rgba(61, 65, 85, 1);
 }
 .dronVideo2 {
-  width: 668px;
-  height: 450.8505859375px;
+  width: 40vw;
   border-radius: 20px;
 }
 
@@ -119,15 +114,14 @@ body, html {
   color: rgba(61, 65, 85, 1);
 }
 .dronVideo3 {
-  width: 668px;
-  height: 450.8505859375px;
+  width: 40vw;
   border-radius: 20px;
 }
 
 .memory {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr minmax(0, 1014px) 1fr;
+  grid-template-columns: 1fr minmax(0, 70vw) 1fr;
   row-gap: 64px;
 }
 
@@ -185,8 +179,7 @@ body, html {
 }
 
 .memoryImage {
-  width: 100%;
-  max-width: 1200px;
+  width: 70vw;
   border-radius: 24px;
   overflow: hidden;
   display: flex;
@@ -194,8 +187,7 @@ body, html {
 }
 
 .memoryImage img {
-  width: 100%;
-  height: auto;
+  width: 70vw;
   display: block;
   border-radius: 20px;
 }

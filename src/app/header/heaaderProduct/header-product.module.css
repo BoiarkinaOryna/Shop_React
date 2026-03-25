@@ -7,7 +7,6 @@ html, body {
 .headerContainer {
   position: relative;
   height: 100vh;
-  overflow: hidden;
   background-color: #CDD5DD;
   display: flex;
   flex-direction: column;
@@ -132,7 +131,7 @@ html, body {
 }
 
 .cardTitle {
-  /* font-family: GT Walsheim Pro; */
+  font-family: GT Walsheim Pro;
   font-size: 18px;
   color: rgba(12, 18, 42, 1);
   font-weight: 500;
@@ -178,6 +177,10 @@ html, body {
     height: 44px;
     margin-top: 30px;
     margin-left: -70px ;
+}
+.cartOpener{
+  background-color: transparent;
+  border: none;
 }
 .orderButton {
 

@@ -66,8 +66,8 @@
     display: flex;
     width: 240px;
     flex-direction: column;
+    justify-content: space-between;
     height: 86px;
-    gap: 16px;
 }
 .p1{
     font-weight: 500;
@@ -79,15 +79,12 @@
     flex-direction: row;
     width: 240px;
     height: 16px;
-    padding: 20px 0 0 0 ;
     gap: 16px;
 }
 .p2{
     font-weight: 500;
     font-size: 14px;
     color: #0C122A;
-
-
 }
 .quantityContainer{
     display: flex;
@@ -135,9 +132,8 @@
     align-items: center;
     background-color: #fff;
     border: none;
-
-
 }
+
 .remove img {
     width: 24px;
     height: 24px;
@@ -196,7 +192,7 @@
     font-size: 14px;
     color: #0C122A;
 }
-.toIssue button{
+.toIssue a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -206,6 +202,7 @@
     padding:12px 16px ;
     gap: 14px;
     background-color: #0C122A;
+    text-decoration: none;
     font-weight: 500;
     font-size: 14px;
     color: #fff;
