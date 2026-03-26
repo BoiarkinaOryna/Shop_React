@@ -35,6 +35,7 @@ export function AuthorizationModal({ onClose, switchToSuccess }: Props) {
             if (!response.ok) {
                 setError(result.message || "Невірна пошта або пароль")
             } else {
+                localStorage.setItem("token", result.token)
                 localStorage.setItem("userRegistered", "true");
                 switchToSuccess()
             }
