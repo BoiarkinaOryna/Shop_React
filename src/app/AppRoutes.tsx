@@ -9,6 +9,8 @@ import { PlaceOrder } from "../pages/place-an-order/PlaceOrder";
 import { CatalogPage } from "../pages/catalog/CatalogPage";
 import { ContactPage } from "../pages/contact-details/ContactPage";
 import { Feedback } from "../pages/send-feedback/Feedback";
+import { MyContacts } from "../components/PersonalData/MyContacts/MyContacts";
+import { MyOrders } from "../components/PersonalData/MyOrders/MyOrders";
 
 
 export function AppRoutes(){
@@ -16,10 +18,13 @@ export function AppRoutes(){
         <Routes>
             <Route path="/" element={<HomePage/>}/>
             <Route path="/" element={<Layout />}>
-                <Route path="/contacts" element={<ContactPage/>}/>
-                <Route path="/about" element={<AboutPage/>}/>
-                <Route path="/catalog" element={<CatalogPage/>}/>
-                <Route path="/send-feedback" element={<Feedback />}></Route>
+                <Route path="about" element={<AboutPage/>}/>
+                <Route path="catalog" element={<CatalogPage/>}/>
+                <Route path="send-feedback" element={<Feedback />}></Route>
+                <Route path="/personal-data" element={<ContactPage/>}>
+                    <Route path="contacts" element={<MyContacts/>}/>
+                    <Route path="orders" element={<MyOrders/>}/>
+                </Route>
             </Route>
             <Route path="/order" element={<PlaceOrder/>} />
             <Route path="/products/:id" element={<ProductPage/>}/>

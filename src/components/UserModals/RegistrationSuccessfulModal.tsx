@@ -11,8 +11,8 @@ export function RegistrationSuccessModal(){
                 </p>
                 <img className={styles.closeModal} src={icons.Cross} alt="" />
             </div>
-            <div className={styles.mainSector} onClick={(event) => {event.stopPropagation()}}>
-                <div className={styles.formInputs}>
+            <div className={styles.mainSector}>
+                <div className={styles.formInputs} onClick={(event) => {event.stopPropagation()}}>
                     <p>Акаунт успішно створено!</p>
                 </div>
                 <div className={styles.bottomSection}>

@@ -20,7 +20,7 @@ export function HeaderSimple(props: HeaderSimpleInterface) {
 
     const handleUserClick = () => {
         if (isRegistered) {
-            navigate("/contacts") 
+            navigate("/personal-data/contacts") 
         } else {
             setModalType("registration") 
             setIsOpen(true)
@@ -32,7 +32,7 @@ export function HeaderSimple(props: HeaderSimpleInterface) {
                 <nav className={stylesS.linksSimple}>
                     {isOnCatalogPage ? <a href="#top">КАТАЛОГ</a> : <Link to={"/catalog"}>КАТАЛОГ</Link>}
                     {isOnAbotPage ? <a href="#top">ПРО НАС</a> : <Link to={"/about"}>ПРО НАС</Link>}
-                    <Link to={"/contacts"}>КОНТАКТИ</Link>
+                    <Link to={"/personal-data/contacts"}>КОНТАКТИ</Link>
                 </nav>
 
                 {isOnHomePage ? (
