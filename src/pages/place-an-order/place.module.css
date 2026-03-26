@@ -257,20 +257,38 @@
     flex-direction: row;
 }
 .productImage img{
-    width:86px;
+    width: 86px;
     height: 86px;
-
+    object-fit: contain;    
+    border-radius: 8px;
+    background: #F5F5F5;
+    padding: 6px;
 }
 .productInfo{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center; 
+    /* padding: 16 px; */
     width: 100%;
+}
+.productInfo p{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(12, 18, 42, 1);
 }
 .productName{
     display: grid;
     flex-direction: column;
+    /* gap: 16; */
     box-sizing: border-box;
+}
+.productName{
+    display: flex;
+    flex-direction: column;
+}
+
+.productPrice{
+    margin-top: 35px;
 }
 .productName p {
     /* font-family: GT Walsheim /Pro; */
@@ -280,9 +298,19 @@
 }
 .productPrice{
     display: flex;
-    gap: 16px;
-    width: 240px;
+    gap: 10px;
+    align-items: center;
+}
+.oldPrice {
+    text-decoration: line-through;
+    color: #9EA0AA;
+    font-size: 14px;
+}
 
+.newPrice {
+    color: #B62D11;
+    font-weight: 600;
+    font-size: 14px;
 }
 .productPrice p{
     font-weight: 500;
@@ -295,8 +323,7 @@
     align-items: center;
 }
 .productQuantity p {
-    font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
     color: #6D717F;
 }
 
@@ -347,7 +374,11 @@
     color: #B62D11;
 }
 
-
+.totalAmount:last-child p {
+    color: #B62D11;
+    font-weight: 600;
+    font-size: 18px;
+}
 
 
 .confirmBlock{
@@ -399,3 +430,19 @@
     font-weight: 500;   
     padding: 12px 16px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
